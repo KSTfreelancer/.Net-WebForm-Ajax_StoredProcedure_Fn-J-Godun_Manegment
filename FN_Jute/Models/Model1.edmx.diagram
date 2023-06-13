@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="15f7e98d9d1c433ba36c025a6cdc6b0f" Name="Diagram1" ZoomLevel="26">
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.DailyFinalize" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.DailyPrecisionWindingProduction" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.DailyPrecisionWindingProduction2" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.DailySpinningWindingProduction" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.DailyTwistingProduction" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.FactoryUnit" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.LoomFinalize" Width="1.5" PointX="2.75" PointY="9.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.LoomProduction" Width="1.5" PointX="4.75" PointY="9.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.PackingFinalize" Width="1.5" PointX="6.75" PointY="9.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.PowerHistoryFinalize" Width="1.5" PointX="8.75" PointY="9.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.PowerHistoryLoomFinalize" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.SpinningTwistingPrecisionProductionFinalize" Width="1.5" PointX="10.75" PointY="5.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.SummaryLoomFinalize" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.SummarySpinningFinalize" Width="1.5" PointX="12.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.DailyFinalize2" Width="1.5" PointX="12.75" PointY="8.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.DailyProductionItem" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.DepartmentType" Width="1.5" PointX="10.75" PointY="13.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.FinishGoodItem" Width="1.5" PointX="12.75" PointY="13.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.LoomFinalize2" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.PackingFinalize2" Width="1.5" PointX="2.75" PointY="14.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.PowerHistoryFinalize2" Width="1.5" PointX="14.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.PowerHistoryLoomFinalize2" Width="1.5" PointX="4.75" PointY="14.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.PrecisionProductionFinalize2" Width="1.5" PointX="6.75" PointY="14.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.SpinningTwistingProductionFinalize2" Width="1.5" PointX="14.75" PointY="9.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.SummaryLoomFinalize2" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProductionsFinalizeModel.SummarySpinningFinalize2" Width="1.5" PointX="16.75" PointY="4.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

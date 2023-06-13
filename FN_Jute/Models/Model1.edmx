@@ -1,0 +1,2060 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ProductionsFinalizeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DailyFinalize">
+          <Key>
+            <PropertyRef Name="DDate" />
+            <PropertyRef Name="Unit" />
+          </Key>
+          <Property Name="DDate" Type="datetime" Nullable="false" />
+          <Property Name="Unit" Type="bigint" Nullable="false" />
+          <Property Name="TotalSP" Type="float" />
+          <Property Name="TotalTW" Type="float" />
+          <Property Name="TotalPR" Type="float" />
+          <Property Name="TotalPK" Type="float" />
+          <Property Name="TotalLM" Type="float" />
+          <Property Name="TotalHandPerTon" Type="float" />
+          <Property Name="TotalBagPerPerson" Type="float" />
+          <Property Name="EntryBy" Type="varchar" MaxLength="50" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="EntryTime" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.DailyFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="DailyFinalize2">
+          <Key>
+            <PropertyRef Name="DDate" />
+            <PropertyRef Name="Unit" />
+          </Key>
+          <Property Name="DDate" Type="datetime" Nullable="false" />
+          <Property Name="Unit" Type="bigint" Nullable="false" />
+          <Property Name="TotalSP" Type="float" />
+          <Property Name="TotalTW" Type="float" />
+          <Property Name="TotalPR" Type="float" />
+          <Property Name="TotalPK" Type="float" />
+          <Property Name="TotalLM" Type="float" />
+          <Property Name="TotalHandPerTon" Type="float" />
+          <Property Name="TotalBagPerPerson" Type="float" />
+          <Property Name="EntryBy" Type="varchar" MaxLength="50" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="EntryTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="DailyPrecisionWindingProduction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductionId" Type="nvarchar" MaxLength="50" />
+          <Property Name="SINo" Type="nvarchar" MaxLength="50" />
+          <Property Name="JobProcessId" Type="nvarchar" MaxLength="50" />
+          <Property Name="RefOrderNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="PrDate" Type="datetime" />
+          <Property Name="ItemCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ItemName" Type="nvarchar" MaxLength="250" />
+          <Property Name="ExpType" Type="nvarchar" MaxLength="250" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="MachineRPM" Type="float" />
+          <Property Name="MachineTPI" Type="float" />
+          <Property Name="ShiftAHours" Type="float" />
+          <Property Name="ShiftAMC" Type="float" />
+          <Property Name="ShiftASpandle" Type="float" />
+          <Property Name="ShiftAProduction" Type="float" />
+          <Property Name="ShiftBHours" Type="float" />
+          <Property Name="ShiftBMC" Type="float" />
+          <Property Name="ShiftBSpandle" Type="float" />
+          <Property Name="ShiftBProduction" Type="float" />
+          <Property Name="ShiftCHours" Type="float" />
+          <Property Name="ShiftCMC" Type="float" />
+          <Property Name="ShiftCSpandle" Type="float" />
+          <Property Name="ShiftCProduction" Type="float" />
+          <Property Name="TotalMC" Type="float" />
+          <Property Name="AverageSize" Type="float" />
+          <Property Name="TotalProductionKg" Type="float" />
+          <Property Name="TargetEfficiencyPercent" Type="float" />
+          <Property Name="TargetEfficiency" Type="float" />
+          <Property Name="EfficiencyAchievedPercent" Type="float" />
+          <Property Name="HundredPercentEfficiencyProduction" Type="float" />
+          <Property Name="AverageCountOperated" Type="float" />
+          <Property Name="Remarks" Type="nvarchar(max)" />
+          <Property Name="EntryByUserId" Type="bigint" />
+          <Property Name="EntryDateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="DailyPrecisionWindingProduction2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductionId" Type="nvarchar" MaxLength="50" />
+          <Property Name="SINo" Type="nvarchar" MaxLength="50" />
+          <Property Name="JobProcessId" Type="nvarchar" MaxLength="50" />
+          <Property Name="RefOrderNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="PrDate" Type="datetime" />
+          <Property Name="ItemCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ItemName" Type="nvarchar" MaxLength="250" />
+          <Property Name="ExpType" Type="nvarchar" MaxLength="250" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="MachineRPM" Type="float" />
+          <Property Name="MachineTPI" Type="float" />
+          <Property Name="ShiftAMC" Type="float" />
+          <Property Name="ShiftASize" Type="float" />
+          <Property Name="ShiftAProduction" Type="float" />
+          <Property Name="ShiftBMC" Type="float" />
+          <Property Name="ShiftBSize" Type="float" />
+          <Property Name="ShiftBProduction" Type="float" />
+          <Property Name="ShiftCMC" Type="float" />
+          <Property Name="ShiftCSize" Type="float" />
+          <Property Name="ShiftCProduction" Type="float" />
+          <Property Name="TotalMC" Type="float" />
+          <Property Name="AverageSize" Type="float" />
+          <Property Name="TotalProductionKg" Type="float" />
+          <Property Name="ShiftAEfficiencyAchievedPercent" Type="float" />
+          <Property Name="ShiftBEfficiencyAchievedPercent" Type="float" />
+          <Property Name="ShiftCEfficiencyAchievedPercent" Type="float" />
+          <Property Name="Remarks" Type="nvarchar(max)" />
+          <Property Name="EntryByUserId" Type="bigint" />
+          <Property Name="EntryDateTime" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.DailyProductionItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="DailyProductionItem">
+          <Key>
+            <PropertyRef Name="PackingProductionKG" />
+            <PropertyRef Name="PackingProductionMT" />
+          </Key>
+          <Property Name="SerialNo" Type="nvarchar" MaxLength="250" />
+          <Property Name="VarItemID" Type="nvarchar" MaxLength="50" />
+          <Property Name="VarItemName" Type="nvarchar" MaxLength="250" />
+          <Property Name="FactoryUnitId" Type="int" />
+          <Property Name="FactoryUnitName" Type="nvarchar" MaxLength="100" />
+          <Property Name="McA" Type="float" />
+          <Property Name="AKg" Type="float" />
+          <Property Name="McB" Type="float" />
+          <Property Name="BKg" Type="float" />
+          <Property Name="PackingProductionKG" Type="float" Nullable="false" />
+          <Property Name="PackingProductionMT" Type="float" Nullable="false" />
+          <Property Name="ProductionDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="DailySpinningWindingProduction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductionId" Type="nvarchar" MaxLength="50" />
+          <Property Name="SINo" Type="nvarchar" MaxLength="50" />
+          <Property Name="JobProcessId" Type="nvarchar" MaxLength="50" />
+          <Property Name="RefOrderNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="PrDate" Type="datetime" />
+          <Property Name="ItemCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ItemName" Type="nvarchar" MaxLength="250" />
+          <Property Name="ExpType" Type="nvarchar" MaxLength="250" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="MachineRPM" Type="float" />
+          <Property Name="MachineTPI" Type="float" />
+          <Property Name="ShiftAHours" Type="float" />
+          <Property Name="ShiftAMC" Type="float" />
+          <Property Name="ShiftASpandle" Type="float" />
+          <Property Name="ShiftAProduction" Type="float" />
+          <Property Name="ShiftBHours" Type="float" />
+          <Property Name="ShiftBMC" Type="float" />
+          <Property Name="ShiftBSpandle" Type="float" />
+          <Property Name="ShiftBProduction" Type="float" />
+          <Property Name="ShiftCHours" Type="float" />
+          <Property Name="ShiftCMC" Type="float" />
+          <Property Name="ShiftCSpandle" Type="float" />
+          <Property Name="ShiftCProduction" Type="float" />
+          <Property Name="TotalMC" Type="float" />
+          <Property Name="AverageSize" Type="float" />
+          <Property Name="TotalProductionKg" Type="float" />
+          <Property Name="TargetEfficiencyPercent" Type="float" />
+          <Property Name="TargetEfficiency" Type="float" />
+          <Property Name="EfficiencyAchievedPercent" Type="float" />
+          <Property Name="HundredPercentEfficiencyProduction" Type="float" />
+          <Property Name="AverageCountOperated" Type="float" />
+          <Property Name="Remarks" Type="nvarchar(max)" />
+          <Property Name="EntryByUserId" Type="bigint" />
+          <Property Name="EntryDateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="DailyTwistingProduction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductionId" Type="nvarchar" MaxLength="50" />
+          <Property Name="SINo" Type="nvarchar" MaxLength="50" />
+          <Property Name="JobProcessId" Type="nvarchar" MaxLength="50" />
+          <Property Name="RefOrderNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="PrDate" Type="datetime" />
+          <Property Name="ItemCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ItemName" Type="nvarchar" MaxLength="250" />
+          <Property Name="ExpType" Type="nvarchar" MaxLength="250" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="MachineRPM" Type="float" />
+          <Property Name="MachineTPI" Type="float" />
+          <Property Name="ShiftAHours" Type="float" />
+          <Property Name="ShiftAMC" Type="float" />
+          <Property Name="ShiftASpandle" Type="float" />
+          <Property Name="ShiftAProduction" Type="float" />
+          <Property Name="ShiftBHours" Type="float" />
+          <Property Name="ShiftBMC" Type="float" />
+          <Property Name="ShiftBSpandle" Type="float" />
+          <Property Name="ShiftBProduction" Type="float" />
+          <Property Name="ShiftCHours" Type="float" />
+          <Property Name="ShiftCMC" Type="float" />
+          <Property Name="ShiftCSpandle" Type="float" />
+          <Property Name="ShiftCProduction" Type="float" />
+          <Property Name="TotalMC" Type="float" />
+          <Property Name="AverageSize" Type="float" />
+          <Property Name="TotalProductionKg" Type="float" />
+          <Property Name="TargetEfficiencyPercent" Type="float" />
+          <Property Name="TargetEfficiency" Type="float" />
+          <Property Name="EfficiencyAchievedPercent" Type="float" />
+          <Property Name="HundredPercentEfficiencyProduction" Type="float" />
+          <Property Name="AverageCountOperated" Type="float" />
+          <Property Name="Remarks" Type="nvarchar(max)" />
+          <Property Name="EntryByUserId" Type="bigint" />
+          <Property Name="EntryDateTime" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.DepartmentType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="DepartmentType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="TblType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DepartmentName" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="FactoryUnit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FactoryUnitName" Type="nvarchar" MaxLength="150" />
+          <Property Name="FactoryUnitLocation" Type="nvarchar" MaxLength="250" />
+          <Property Name="Active" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.FinishGoodItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="FinishGoodItem">
+          <Key>
+            <PropertyRef Name="VarCount" />
+          </Key>
+          <Property Name="VarItemCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="VarItemName" Type="nvarchar" MaxLength="500" />
+          <Property Name="NameShort" Type="nvarchar" MaxLength="200" />
+          <Property Name="Quality" Type="nvarchar" MaxLength="250" />
+          <Property Name="VarCount" Type="float" Nullable="false" />
+          <Property Name="Thickness" Type="float" />
+          <Property Name="ThicknessMulti" Type="float" />
+          <Property Name="ItemType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="LoomFinalize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="Yearn" Type="nvarchar" MaxLength="50" />
+          <Property Name="Item" Type="nvarchar" MaxLength="50" />
+          <Property Name="Weight" Type="float" />
+          <Property Name="QtyPcs" Type="float" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="DDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.LoomFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="LoomFinalize2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="Yearn" Type="nvarchar" MaxLength="50" />
+          <Property Name="Item" Type="nvarchar" MaxLength="50" />
+          <Property Name="Weight" Type="float" />
+          <Property Name="QtyPcs" Type="float" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="DDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="LoomProduction">
+          <Key>
+            <PropertyRef Name="SerialNo" />
+          </Key>
+          <Property Name="SerialNo" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="InvoiceNo" Type="nvarchar" MaxLength="250" />
+          <Property Name="ItemId" Type="nvarchar" MaxLength="250" />
+          <Property Name="ItemName" Type="nvarchar" MaxLength="250" />
+          <Property Name="YarnId" Type="nvarchar" MaxLength="250" />
+          <Property Name="YarnName" Type="nvarchar" MaxLength="250" />
+          <Property Name="ProductionDate" Type="datetime" />
+          <Property Name="QtyPcs" Type="float" />
+          <Property Name="WeightPerPcs" Type="float" />
+          <Property Name="RatePcs" Type="float" />
+          <Property Name="TotalKg" Type="float" />
+          <Property Name="AmountTk" Type="float" />
+          <Property Name="Remarks" Type="nvarchar(max)" />
+          <Property Name="EntryBy" Type="bigint" />
+          <Property Name="Status" Type="nchar" MaxLength="10" />
+          <Property Name="Unit" Type="bigint" />
+        </EntityType>
+        <EntityType Name="PackingFinalize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="Item" Type="nvarchar" MaxLength="50" />
+          <Property Name="McA" Type="float" />
+          <Property Name="ProductionA" Type="float" />
+          <Property Name="McB" Type="float" />
+          <Property Name="ProductionB" Type="float" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="DDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.PackingFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PackingFinalize2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="Item" Type="nvarchar" MaxLength="50" />
+          <Property Name="McA" Type="float" />
+          <Property Name="ProductionA" Type="float" />
+          <Property Name="McB" Type="float" />
+          <Property Name="ProductionB" Type="float" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="DDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PowerHistoryFinalize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="AshiftPowerLoseT" Type="float" />
+          <Property Name="AshiftPowerFailm" Type="float" />
+          <Property Name="AshiftGRunning" Type="float" />
+          <Property Name="BshiftPowerLoseT" Type="float" />
+          <Property Name="BshiftPowerFailm" Type="float" />
+          <Property Name="BshiftGRunning" Type="float" />
+          <Property Name="CshiftPowerLoseT" Type="float" />
+          <Property Name="CshiftPowerFailm" Type="float" />
+          <Property Name="CshiftGRunning" Type="float" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="DDate" Type="datetime" />
+          <Property Name="ABCTotalPowerLoseT" Type="float" />
+          <Property Name="ABCTotalPowerFailm" Type="float" />
+          <Property Name="ABCTotalGRunning" Type="float" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.PowerHistoryFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PowerHistoryFinalize2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="AshiftPowerLoseT" Type="float" />
+          <Property Name="AshiftPowerFailm" Type="float" />
+          <Property Name="AshiftGRunning" Type="float" />
+          <Property Name="BshiftPowerLoseT" Type="float" />
+          <Property Name="BshiftPowerFailm" Type="float" />
+          <Property Name="BshiftGRunning" Type="float" />
+          <Property Name="CshiftPowerLoseT" Type="float" />
+          <Property Name="CshiftPowerFailm" Type="float" />
+          <Property Name="CshiftGRunning" Type="float" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="DDate" Type="datetime" />
+          <Property Name="ABCTotalPowerLoseT" Type="float" />
+          <Property Name="ABCTotalPowerFailm" Type="float" />
+          <Property Name="ABCTotalGRunning" Type="float" />
+        </EntityType>
+        <EntityType Name="PowerHistoryLoomFinalize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="AshiftPowerLoseT" Type="float" />
+          <Property Name="AshiftPowerFailm" Type="float" />
+          <Property Name="AshiftGRunning" Type="float" />
+          <Property Name="BshiftPowerLoseT" Type="float" />
+          <Property Name="BshiftPowerFailm" Type="float" />
+          <Property Name="BshiftGRunning" Type="float" />
+          <Property Name="CshiftPowerLoseT" Type="float" />
+          <Property Name="CshiftPowerFailm" Type="float" />
+          <Property Name="CshiftGRunning" Type="float" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="DDate" Type="datetime" />
+          <Property Name="ABCTotalPowerLoseT" Type="float" />
+          <Property Name="ABCTotalPowerFailm" Type="float" />
+          <Property Name="ABCTotalGRunning" Type="float" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.PowerHistoryLoomFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PowerHistoryLoomFinalize2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="AshiftPowerLoseT" Type="float" />
+          <Property Name="AshiftPowerFailm" Type="float" />
+          <Property Name="AshiftGRunning" Type="float" />
+          <Property Name="BshiftPowerLoseT" Type="float" />
+          <Property Name="BshiftPowerFailm" Type="float" />
+          <Property Name="BshiftGRunning" Type="float" />
+          <Property Name="CshiftPowerLoseT" Type="float" />
+          <Property Name="CshiftPowerFailm" Type="float" />
+          <Property Name="CshiftGRunning" Type="float" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="DDate" Type="datetime" />
+          <Property Name="ABCTotalPowerLoseT" Type="float" />
+          <Property Name="ABCTotalPowerFailm" Type="float" />
+          <Property Name="ABCTotalGRunning" Type="float" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.PrecisionProductionFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PrecisionProductionFinalize2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="ItemName" Type="nvarchar" MaxLength="250" />
+          <Property Name="ShiftAMC" Type="float" />
+          <Property Name="ShiftASize" Type="float" />
+          <Property Name="ShiftAProduction" Type="float" />
+          <Property Name="ShiftBMC" Type="float" />
+          <Property Name="ShiftBSize" Type="float" />
+          <Property Name="ShiftBProduction" Type="float" />
+          <Property Name="ShiftCMC" Type="float" />
+          <Property Name="ShiftCSize" Type="float" />
+          <Property Name="ShiftCProduction" Type="float" />
+          <Property Name="TotalProductionKg" Type="float" />
+          <Property Name="TotalMC" Type="float" />
+          <Property Name="AverageSize" Type="float" />
+          <Property Name="Remarks" Type="nvarchar(max)" />
+          <Property Name="EntryDateTime" Type="datetime" />
+          <Property Name="DDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'ProductionsFinalize.dbo.SLHandsSummary' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SLHandsSummary">
+          <Property Name="TblType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Id" Type="int" />
+          <Property Name="DepartmentType" Type="nvarchar" MaxLength="300" />
+          <Property Name="AHands" Type="float" />
+          <Property Name="BHands" Type="float" />
+          <Property Name="CHands" Type="float" />
+        </EntityType>-->
+        <EntityType Name="SpinningTwistingPrecisionProductionFinalize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="SLNo" Type="int" />
+          <Property Name="TType" Type="nvarchar" MaxLength="1" />
+          <Property Name="ItemName" Type="nvarchar" MaxLength="250" />
+          <Property Name="ExpType" Type="nvarchar" MaxLength="250" />
+          <Property Name="MachineRPM" Type="float" />
+          <Property Name="MachineTPI" Type="float" />
+          <Property Name="ShiftAHours" Type="float" />
+          <Property Name="ShiftAMC" Type="float" />
+          <Property Name="ShiftASpandle" Type="float" />
+          <Property Name="ShiftAProduction" Type="float" />
+          <Property Name="ShiftBHours" Type="float" />
+          <Property Name="ShiftBMC" Type="float" />
+          <Property Name="ShiftBSpandle" Type="float" />
+          <Property Name="ShiftBProduction" Type="float" />
+          <Property Name="ShiftCHours" Type="float" />
+          <Property Name="ShiftCMC" Type="float" />
+          <Property Name="ShiftCSpandle" Type="float" />
+          <Property Name="ShiftCProduction" Type="float" />
+          <Property Name="TotalProductionKg" Type="float" />
+          <Property Name="TargetEfficiencyPercent" Type="float" />
+          <Property Name="TargetEfficiency" Type="float" />
+          <Property Name="EfficiencyAchievedPercent" Type="float" />
+          <Property Name="HundredPercentEfficiencyProduction" Type="float" />
+          <Property Name="EntryDateTime" Type="datetime" />
+          <Property Name="DDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.SpinningTwistingProductionFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="SpinningTwistingProductionFinalize2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="SLNo" Type="int" />
+          <Property Name="TType" Type="nvarchar" MaxLength="1" />
+          <Property Name="ItemName" Type="nvarchar" MaxLength="250" />
+          <Property Name="ExpType" Type="nvarchar" MaxLength="250" />
+          <Property Name="MachineRPM" Type="float" />
+          <Property Name="MachineTPI" Type="float" />
+          <Property Name="ShiftAHours" Type="float" />
+          <Property Name="ShiftAMC" Type="float" />
+          <Property Name="ShiftASpandle" Type="float" />
+          <Property Name="ShiftAProduction" Type="float" />
+          <Property Name="ShiftBHours" Type="float" />
+          <Property Name="ShiftBMC" Type="float" />
+          <Property Name="ShiftBSpandle" Type="float" />
+          <Property Name="ShiftBProduction" Type="float" />
+          <Property Name="ShiftCHours" Type="float" />
+          <Property Name="ShiftCMC" Type="float" />
+          <Property Name="ShiftCSpandle" Type="float" />
+          <Property Name="ShiftCProduction" Type="float" />
+          <Property Name="TotalProductionKg" Type="float" />
+          <Property Name="TargetEfficiencyPercent" Type="float" />
+          <Property Name="TargetEfficiency" Type="float" />
+          <Property Name="EfficiencyAchievedPercent" Type="float" />
+          <Property Name="HundredPercentEfficiencyProduction" Type="float" />
+          <Property Name="EntryDateTime" Type="datetime" />
+          <Property Name="DDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SummaryLoomFinalize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="Section" Type="nvarchar" MaxLength="100" />
+          <Property Name="A_Hands" Type="float" />
+          <Property Name="B_Hands" Type="float" />
+          <Property Name="C_Hands" Type="float" />
+          <Property Name="Total_ABC_Hands" Type="float" />
+          <Property Name="ProductionEntryDate" Type="datetime" />
+          <Property Name="DDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.SummaryLoomFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="SummaryLoomFinalize2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="Section" Type="nvarchar" MaxLength="100" />
+          <Property Name="A_Hands" Type="float" />
+          <Property Name="B_Hands" Type="float" />
+          <Property Name="C_Hands" Type="float" />
+          <Property Name="Total_ABC_Hands" Type="float" />
+          <Property Name="ProductionEntryDate" Type="datetime" />
+          <Property Name="DDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SummarySpinningFinalize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="Section" Type="nvarchar" MaxLength="100" />
+          <Property Name="A_Hands" Type="float" />
+          <Property Name="B_Hands" Type="float" />
+          <Property Name="C_Hands" Type="float" />
+          <Property Name="Total_ABC_Hands" Type="float" />
+          <Property Name="ProductionEntryDate" Type="datetime" />
+          <Property Name="DDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.SummarySpinningFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="SummarySpinningFinalize2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Unit" Type="bigint" />
+          <Property Name="Section" Type="nvarchar" MaxLength="100" />
+          <Property Name="A_Hands" Type="float" />
+          <Property Name="B_Hands" Type="float" />
+          <Property Name="C_Hands" Type="float" />
+          <Property Name="Total_ABC_Hands" Type="float" />
+          <Property Name="ProductionEntryDate" Type="datetime" />
+          <Property Name="DDate" Type="datetime" />
+        </EntityType>
+        <Function Name="SaveFinalize" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="STP_ProductionFinalizeString" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="PackingFinalizeString" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="LoomFinalizeString" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="SummarySpinningFinalizeString" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="SummaryLoomFinalizeString" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="PowerHistoryFinalizeString" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="PowerHistoryLoomFinalizeString" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="OldInvoice" Type="nvarchar" Mode="In" />
+          <Parameter Name="pdFirst" Type="nvarchar" Mode="In" />
+          <Parameter Name="pdSecond" Type="nvarchar" Mode="In" />
+          <Parameter Name="pFirst" Type="nvarchar" Mode="In" />
+          <Parameter Name="date" Type="datetime" Mode="In" />
+          <Parameter Name="Unit" Type="bigint" Mode="In" />
+          <Parameter Name="DailyFinalize" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="SaveFinalize2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="STP_ProductionFinalize2String" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Precision_ProductionFinalize2String" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="PackingFinalize2String" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="LoomFinalize2String" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="SummarySpinningFinalize2String" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="SummaryLoomFinalize2String" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="PowerHistoryFinalize2String" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="PowerHistoryLoomFinalize2String" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="OldInvoice" Type="nvarchar" Mode="In" />
+          <Parameter Name="pdFirst" Type="nvarchar" Mode="In" />
+          <Parameter Name="pdSecond" Type="nvarchar" Mode="In" />
+          <Parameter Name="pFirst" Type="nvarchar" Mode="In" />
+          <Parameter Name="date" Type="datetime" Mode="In" />
+          <Parameter Name="Unit" Type="bigint" Mode="In" />
+          <Parameter Name="DailyFinalize2" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="split" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="delimited" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="delimiter" Type="nvarchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="id" Type="int" Nullable="false" />
+                <Property Name="val" Type="nvarchar(max)" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <EntityContainer Name="ProductionsFinalizeModelStoreContainer">
+          <EntitySet Name="DailyFinalize" EntityType="Self.DailyFinalize" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DailyPrecisionWindingProduction" EntityType="Self.DailyPrecisionWindingProduction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DailyPrecisionWindingProduction2" EntityType="Self.DailyPrecisionWindingProduction2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DailySpinningWindingProduction" EntityType="Self.DailySpinningWindingProduction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DailyTwistingProduction" EntityType="Self.DailyTwistingProduction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FactoryUnit" EntityType="Self.FactoryUnit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoomFinalize" EntityType="Self.LoomFinalize" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoomProduction" EntityType="Self.LoomProduction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PackingFinalize" EntityType="Self.PackingFinalize" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PowerHistoryFinalize" EntityType="Self.PowerHistoryFinalize" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PowerHistoryLoomFinalize" EntityType="Self.PowerHistoryLoomFinalize" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SpinningTwistingPrecisionProductionFinalize" EntityType="Self.SpinningTwistingPrecisionProductionFinalize" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SummaryLoomFinalize" EntityType="Self.SummaryLoomFinalize" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SummarySpinningFinalize" EntityType="Self.SummarySpinningFinalize" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DailyFinalize2" EntityType="Self.DailyFinalize2" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [DailyFinalize2].[DDate] AS [DDate], 
+    [DailyFinalize2].[Unit] AS [Unit], 
+    [DailyFinalize2].[TotalSP] AS [TotalSP], 
+    [DailyFinalize2].[TotalTW] AS [TotalTW], 
+    [DailyFinalize2].[TotalPR] AS [TotalPR], 
+    [DailyFinalize2].[TotalPK] AS [TotalPK], 
+    [DailyFinalize2].[TotalLM] AS [TotalLM], 
+    [DailyFinalize2].[TotalHandPerTon] AS [TotalHandPerTon], 
+    [DailyFinalize2].[TotalBagPerPerson] AS [TotalBagPerPerson], 
+    [DailyFinalize2].[EntryBy] AS [EntryBy], 
+    [DailyFinalize2].[EntryDate] AS [EntryDate], 
+    [DailyFinalize2].[EntryTime] AS [EntryTime]
+    FROM [dbo].[DailyFinalize2] AS [DailyFinalize2]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="DailyProductionItem" EntityType="Self.DailyProductionItem" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [DailyProductionItem].[SerialNo] AS [SerialNo], 
+    [DailyProductionItem].[VarItemID] AS [VarItemID], 
+    [DailyProductionItem].[VarItemName] AS [VarItemName], 
+    [DailyProductionItem].[FactoryUnitId] AS [FactoryUnitId], 
+    [DailyProductionItem].[FactoryUnitName] AS [FactoryUnitName], 
+    [DailyProductionItem].[McA] AS [McA], 
+    [DailyProductionItem].[AKg] AS [AKg], 
+    [DailyProductionItem].[McB] AS [McB], 
+    [DailyProductionItem].[BKg] AS [BKg], 
+    [DailyProductionItem].[PackingProductionKG] AS [PackingProductionKG], 
+    [DailyProductionItem].[PackingProductionMT] AS [PackingProductionMT], 
+    [DailyProductionItem].[ProductionDate] AS [ProductionDate]
+    FROM [dbo].[DailyProductionItem] AS [DailyProductionItem]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="DepartmentType" EntityType="Self.DepartmentType" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [DepartmentType].[TblType] AS [TblType], 
+    [DepartmentType].[Id] AS [Id], 
+    [DepartmentType].[DepartmentName] AS [DepartmentName]
+    FROM [dbo].[DepartmentType] AS [DepartmentType]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FinishGoodItem" EntityType="Self.FinishGoodItem" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [FinishGoodItem].[VarItemCode] AS [VarItemCode], 
+    [FinishGoodItem].[VarItemName] AS [VarItemName], 
+    [FinishGoodItem].[NameShort] AS [NameShort], 
+    [FinishGoodItem].[Quality] AS [Quality], 
+    [FinishGoodItem].[VarCount] AS [VarCount], 
+    [FinishGoodItem].[Thickness] AS [Thickness], 
+    [FinishGoodItem].[ThicknessMulti] AS [ThicknessMulti], 
+    [FinishGoodItem].[ItemType] AS [ItemType], 
+    [FinishGoodItem].[Active] AS [Active]
+    FROM [dbo].[FinishGoodItem] AS [FinishGoodItem]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="LoomFinalize2" EntityType="Self.LoomFinalize2" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [LoomFinalize2].[Id] AS [Id], 
+    [LoomFinalize2].[Unit] AS [Unit], 
+    [LoomFinalize2].[Yearn] AS [Yearn], 
+    [LoomFinalize2].[Item] AS [Item], 
+    [LoomFinalize2].[Weight] AS [Weight], 
+    [LoomFinalize2].[QtyPcs] AS [QtyPcs], 
+    [LoomFinalize2].[EntryDate] AS [EntryDate], 
+    [LoomFinalize2].[DDate] AS [DDate]
+    FROM [dbo].[LoomFinalize2] AS [LoomFinalize2]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PackingFinalize2" EntityType="Self.PackingFinalize2" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PackingFinalize2].[Id] AS [Id], 
+    [PackingFinalize2].[Unit] AS [Unit], 
+    [PackingFinalize2].[Item] AS [Item], 
+    [PackingFinalize2].[McA] AS [McA], 
+    [PackingFinalize2].[ProductionA] AS [ProductionA], 
+    [PackingFinalize2].[McB] AS [McB], 
+    [PackingFinalize2].[ProductionB] AS [ProductionB], 
+    [PackingFinalize2].[EntryDate] AS [EntryDate], 
+    [PackingFinalize2].[DDate] AS [DDate]
+    FROM [dbo].[PackingFinalize2] AS [PackingFinalize2]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PowerHistoryFinalize2" EntityType="Self.PowerHistoryFinalize2" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PowerHistoryFinalize2].[Id] AS [Id], 
+    [PowerHistoryFinalize2].[Unit] AS [Unit], 
+    [PowerHistoryFinalize2].[AshiftPowerLoseT] AS [AshiftPowerLoseT], 
+    [PowerHistoryFinalize2].[AshiftPowerFailm] AS [AshiftPowerFailm], 
+    [PowerHistoryFinalize2].[AshiftGRunning] AS [AshiftGRunning], 
+    [PowerHistoryFinalize2].[BshiftPowerLoseT] AS [BshiftPowerLoseT], 
+    [PowerHistoryFinalize2].[BshiftPowerFailm] AS [BshiftPowerFailm], 
+    [PowerHistoryFinalize2].[BshiftGRunning] AS [BshiftGRunning], 
+    [PowerHistoryFinalize2].[CshiftPowerLoseT] AS [CshiftPowerLoseT], 
+    [PowerHistoryFinalize2].[CshiftPowerFailm] AS [CshiftPowerFailm], 
+    [PowerHistoryFinalize2].[CshiftGRunning] AS [CshiftGRunning], 
+    [PowerHistoryFinalize2].[EntryDate] AS [EntryDate], 
+    [PowerHistoryFinalize2].[DDate] AS [DDate], 
+    [PowerHistoryFinalize2].[ABCTotalPowerLoseT] AS [ABCTotalPowerLoseT], 
+    [PowerHistoryFinalize2].[ABCTotalPowerFailm] AS [ABCTotalPowerFailm], 
+    [PowerHistoryFinalize2].[ABCTotalGRunning] AS [ABCTotalGRunning]
+    FROM [dbo].[PowerHistoryFinalize2] AS [PowerHistoryFinalize2]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PowerHistoryLoomFinalize2" EntityType="Self.PowerHistoryLoomFinalize2" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PowerHistoryLoomFinalize2].[Id] AS [Id], 
+    [PowerHistoryLoomFinalize2].[Unit] AS [Unit], 
+    [PowerHistoryLoomFinalize2].[AshiftPowerLoseT] AS [AshiftPowerLoseT], 
+    [PowerHistoryLoomFinalize2].[AshiftPowerFailm] AS [AshiftPowerFailm], 
+    [PowerHistoryLoomFinalize2].[AshiftGRunning] AS [AshiftGRunning], 
+    [PowerHistoryLoomFinalize2].[BshiftPowerLoseT] AS [BshiftPowerLoseT], 
+    [PowerHistoryLoomFinalize2].[BshiftPowerFailm] AS [BshiftPowerFailm], 
+    [PowerHistoryLoomFinalize2].[BshiftGRunning] AS [BshiftGRunning], 
+    [PowerHistoryLoomFinalize2].[CshiftPowerLoseT] AS [CshiftPowerLoseT], 
+    [PowerHistoryLoomFinalize2].[CshiftPowerFailm] AS [CshiftPowerFailm], 
+    [PowerHistoryLoomFinalize2].[CshiftGRunning] AS [CshiftGRunning], 
+    [PowerHistoryLoomFinalize2].[EntryDate] AS [EntryDate], 
+    [PowerHistoryLoomFinalize2].[DDate] AS [DDate], 
+    [PowerHistoryLoomFinalize2].[ABCTotalPowerLoseT] AS [ABCTotalPowerLoseT], 
+    [PowerHistoryLoomFinalize2].[ABCTotalPowerFailm] AS [ABCTotalPowerFailm], 
+    [PowerHistoryLoomFinalize2].[ABCTotalGRunning] AS [ABCTotalGRunning]
+    FROM [dbo].[PowerHistoryLoomFinalize2] AS [PowerHistoryLoomFinalize2]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PrecisionProductionFinalize2" EntityType="Self.PrecisionProductionFinalize2" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PrecisionProductionFinalize2].[Id] AS [Id], 
+    [PrecisionProductionFinalize2].[Unit] AS [Unit], 
+    [PrecisionProductionFinalize2].[ItemName] AS [ItemName], 
+    [PrecisionProductionFinalize2].[ShiftAMC] AS [ShiftAMC], 
+    [PrecisionProductionFinalize2].[ShiftASize] AS [ShiftASize], 
+    [PrecisionProductionFinalize2].[ShiftAProduction] AS [ShiftAProduction], 
+    [PrecisionProductionFinalize2].[ShiftBMC] AS [ShiftBMC], 
+    [PrecisionProductionFinalize2].[ShiftBSize] AS [ShiftBSize], 
+    [PrecisionProductionFinalize2].[ShiftBProduction] AS [ShiftBProduction], 
+    [PrecisionProductionFinalize2].[ShiftCMC] AS [ShiftCMC], 
+    [PrecisionProductionFinalize2].[ShiftCSize] AS [ShiftCSize], 
+    [PrecisionProductionFinalize2].[ShiftCProduction] AS [ShiftCProduction], 
+    [PrecisionProductionFinalize2].[TotalProductionKg] AS [TotalProductionKg], 
+    [PrecisionProductionFinalize2].[TotalMC] AS [TotalMC], 
+    [PrecisionProductionFinalize2].[AverageSize] AS [AverageSize], 
+    [PrecisionProductionFinalize2].[Remarks] AS [Remarks], 
+    [PrecisionProductionFinalize2].[EntryDateTime] AS [EntryDateTime], 
+    [PrecisionProductionFinalize2].[DDate] AS [DDate]
+    FROM [dbo].[PrecisionProductionFinalize2] AS [PrecisionProductionFinalize2]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SpinningTwistingProductionFinalize2" EntityType="Self.SpinningTwistingProductionFinalize2" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SpinningTwistingProductionFinalize2].[Id] AS [Id], 
+    [SpinningTwistingProductionFinalize2].[Unit] AS [Unit], 
+    [SpinningTwistingProductionFinalize2].[SLNo] AS [SLNo], 
+    [SpinningTwistingProductionFinalize2].[TType] AS [TType], 
+    [SpinningTwistingProductionFinalize2].[ItemName] AS [ItemName], 
+    [SpinningTwistingProductionFinalize2].[ExpType] AS [ExpType], 
+    [SpinningTwistingProductionFinalize2].[MachineRPM] AS [MachineRPM], 
+    [SpinningTwistingProductionFinalize2].[MachineTPI] AS [MachineTPI], 
+    [SpinningTwistingProductionFinalize2].[ShiftAHours] AS [ShiftAHours], 
+    [SpinningTwistingProductionFinalize2].[ShiftAMC] AS [ShiftAMC], 
+    [SpinningTwistingProductionFinalize2].[ShiftASpandle] AS [ShiftASpandle], 
+    [SpinningTwistingProductionFinalize2].[ShiftAProduction] AS [ShiftAProduction], 
+    [SpinningTwistingProductionFinalize2].[ShiftBHours] AS [ShiftBHours], 
+    [SpinningTwistingProductionFinalize2].[ShiftBMC] AS [ShiftBMC], 
+    [SpinningTwistingProductionFinalize2].[ShiftBSpandle] AS [ShiftBSpandle], 
+    [SpinningTwistingProductionFinalize2].[ShiftBProduction] AS [ShiftBProduction], 
+    [SpinningTwistingProductionFinalize2].[ShiftCHours] AS [ShiftCHours], 
+    [SpinningTwistingProductionFinalize2].[ShiftCMC] AS [ShiftCMC], 
+    [SpinningTwistingProductionFinalize2].[ShiftCSpandle] AS [ShiftCSpandle], 
+    [SpinningTwistingProductionFinalize2].[ShiftCProduction] AS [ShiftCProduction], 
+    [SpinningTwistingProductionFinalize2].[TotalProductionKg] AS [TotalProductionKg], 
+    [SpinningTwistingProductionFinalize2].[TargetEfficiencyPercent] AS [TargetEfficiencyPercent], 
+    [SpinningTwistingProductionFinalize2].[TargetEfficiency] AS [TargetEfficiency], 
+    [SpinningTwistingProductionFinalize2].[EfficiencyAchievedPercent] AS [EfficiencyAchievedPercent], 
+    [SpinningTwistingProductionFinalize2].[HundredPercentEfficiencyProduction] AS [HundredPercentEfficiencyProduction], 
+    [SpinningTwistingProductionFinalize2].[EntryDateTime] AS [EntryDateTime], 
+    [SpinningTwistingProductionFinalize2].[DDate] AS [DDate]
+    FROM [dbo].[SpinningTwistingProductionFinalize2] AS [SpinningTwistingProductionFinalize2]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SummaryLoomFinalize2" EntityType="Self.SummaryLoomFinalize2" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SummaryLoomFinalize2].[Id] AS [Id], 
+    [SummaryLoomFinalize2].[Unit] AS [Unit], 
+    [SummaryLoomFinalize2].[Section] AS [Section], 
+    [SummaryLoomFinalize2].[A_Hands] AS [A_Hands], 
+    [SummaryLoomFinalize2].[B_Hands] AS [B_Hands], 
+    [SummaryLoomFinalize2].[C_Hands] AS [C_Hands], 
+    [SummaryLoomFinalize2].[Total_ABC_Hands] AS [Total_ABC_Hands], 
+    [SummaryLoomFinalize2].[ProductionEntryDate] AS [ProductionEntryDate], 
+    [SummaryLoomFinalize2].[DDate] AS [DDate]
+    FROM [dbo].[SummaryLoomFinalize2] AS [SummaryLoomFinalize2]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SummarySpinningFinalize2" EntityType="Self.SummarySpinningFinalize2" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SummarySpinningFinalize2].[Id] AS [Id], 
+    [SummarySpinningFinalize2].[Unit] AS [Unit], 
+    [SummarySpinningFinalize2].[Section] AS [Section], 
+    [SummarySpinningFinalize2].[A_Hands] AS [A_Hands], 
+    [SummarySpinningFinalize2].[B_Hands] AS [B_Hands], 
+    [SummarySpinningFinalize2].[C_Hands] AS [C_Hands], 
+    [SummarySpinningFinalize2].[Total_ABC_Hands] AS [Total_ABC_Hands], 
+    [SummarySpinningFinalize2].[ProductionEntryDate] AS [ProductionEntryDate], 
+    [SummarySpinningFinalize2].[DDate] AS [DDate]
+    FROM [dbo].[SummarySpinningFinalize2] AS [SummarySpinningFinalize2]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProductionsFinalizeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ProductionsFinalizeEntities1" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="SaveFinalize" ReturnType="Collection(String)">
+            <Parameter Name="STP_ProductionFinalizeString" Mode="In" Type="String" />
+            <Parameter Name="PackingFinalizeString" Mode="In" Type="String" />
+            <Parameter Name="LoomFinalizeString" Mode="In" Type="String" />
+            <Parameter Name="SummarySpinningFinalizeString" Mode="In" Type="String" />
+            <Parameter Name="SummaryLoomFinalizeString" Mode="In" Type="String" />
+            <Parameter Name="PowerHistoryFinalizeString" Mode="In" Type="String" />
+            <Parameter Name="PowerHistoryLoomFinalizeString" Mode="In" Type="String" />
+            <Parameter Name="OldInvoice" Mode="In" Type="String" />
+            <Parameter Name="pdFirst" Mode="In" Type="String" />
+            <Parameter Name="pdSecond" Mode="In" Type="String" />
+            <Parameter Name="pFirst" Mode="In" Type="String" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+            <Parameter Name="Unit" Mode="In" Type="Int64" />
+            <Parameter Name="DailyFinalize" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="split" IsComposable="true" ReturnType="Collection(ProductionsFinalizeModel.split_Result)">
+            <Parameter Name="delimited" Mode="In" Type="String" />
+            <Parameter Name="delimiter" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SaveFinalize2" ReturnType="Collection(String)">
+            <Parameter Name="STP_ProductionFinalize2String" Mode="In" Type="String" />
+            <Parameter Name="Precision_ProductionFinalize2String" Mode="In" Type="String" />
+            <Parameter Name="PackingFinalize2String" Mode="In" Type="String" />
+            <Parameter Name="LoomFinalize2String" Mode="In" Type="String" />
+            <Parameter Name="SummarySpinningFinalize2String" Mode="In" Type="String" />
+            <Parameter Name="SummaryLoomFinalize2String" Mode="In" Type="String" />
+            <Parameter Name="PowerHistoryFinalize2String" Mode="In" Type="String" />
+            <Parameter Name="PowerHistoryLoomFinalize2String" Mode="In" Type="String" />
+            <Parameter Name="OldInvoice" Mode="In" Type="String" />
+            <Parameter Name="pdFirst" Mode="In" Type="String" />
+            <Parameter Name="pdSecond" Mode="In" Type="String" />
+            <Parameter Name="pFirst" Mode="In" Type="String" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+            <Parameter Name="Unit" Mode="In" Type="Int64" />
+            <Parameter Name="DailyFinalize2" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="DailyFinalizes" EntityType="ProductionsFinalizeModel.DailyFinalize" />
+          <EntitySet Name="DailyPrecisionWindingProductions" EntityType="ProductionsFinalizeModel.DailyPrecisionWindingProduction" />
+          <EntitySet Name="DailyPrecisionWindingProduction2" EntityType="ProductionsFinalizeModel.DailyPrecisionWindingProduction2" />
+          <EntitySet Name="DailySpinningWindingProductions" EntityType="ProductionsFinalizeModel.DailySpinningWindingProduction" />
+          <EntitySet Name="DailyTwistingProductions" EntityType="ProductionsFinalizeModel.DailyTwistingProduction" />
+          <EntitySet Name="FactoryUnits" EntityType="ProductionsFinalizeModel.FactoryUnit" />
+          <EntitySet Name="LoomFinalizes" EntityType="ProductionsFinalizeModel.LoomFinalize" />
+          <EntitySet Name="LoomProductions" EntityType="ProductionsFinalizeModel.LoomProduction" />
+          <EntitySet Name="PackingFinalizes" EntityType="ProductionsFinalizeModel.PackingFinalize" />
+          <EntitySet Name="PowerHistoryFinalizes" EntityType="ProductionsFinalizeModel.PowerHistoryFinalize" />
+          <EntitySet Name="PowerHistoryLoomFinalizes" EntityType="ProductionsFinalizeModel.PowerHistoryLoomFinalize" />
+          <EntitySet Name="SpinningTwistingPrecisionProductionFinalizes" EntityType="ProductionsFinalizeModel.SpinningTwistingPrecisionProductionFinalize" />
+          <EntitySet Name="SummaryLoomFinalizes" EntityType="ProductionsFinalizeModel.SummaryLoomFinalize" />
+          <EntitySet Name="SummarySpinningFinalizes" EntityType="ProductionsFinalizeModel.SummarySpinningFinalize" />
+          <EntitySet Name="DailyFinalize2" EntityType="ProductionsFinalizeModel.DailyFinalize2" />
+          <EntitySet Name="DailyProductionItems" EntityType="ProductionsFinalizeModel.DailyProductionItem" />
+          <EntitySet Name="DepartmentTypes" EntityType="ProductionsFinalizeModel.DepartmentType" />
+          <EntitySet Name="FinishGoodItems" EntityType="ProductionsFinalizeModel.FinishGoodItem" />
+          <EntitySet Name="LoomFinalize2" EntityType="ProductionsFinalizeModel.LoomFinalize2" />
+          <EntitySet Name="PackingFinalize2" EntityType="ProductionsFinalizeModel.PackingFinalize2" />
+          <EntitySet Name="PowerHistoryFinalize2" EntityType="ProductionsFinalizeModel.PowerHistoryFinalize2" />
+          <EntitySet Name="PowerHistoryLoomFinalize2" EntityType="ProductionsFinalizeModel.PowerHistoryLoomFinalize2" />
+          <EntitySet Name="PrecisionProductionFinalize2" EntityType="ProductionsFinalizeModel.PrecisionProductionFinalize2" />
+          <EntitySet Name="SpinningTwistingProductionFinalize2" EntityType="ProductionsFinalizeModel.SpinningTwistingProductionFinalize2" />
+          <EntitySet Name="SummaryLoomFinalize2" EntityType="ProductionsFinalizeModel.SummaryLoomFinalize2" />
+          <EntitySet Name="SummarySpinningFinalize2" EntityType="ProductionsFinalizeModel.SummarySpinningFinalize2" />
+          </EntityContainer>
+        <ComplexType Name="split_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="val" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="DailyFinalize">
+          <Key>
+            <PropertyRef Name="DDate" />
+            <PropertyRef Name="Unit" />
+          </Key>
+          <Property Name="DDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Unit" Type="Int64" Nullable="false" />
+          <Property Name="TotalSP" Type="Double" />
+          <Property Name="TotalTW" Type="Double" />
+          <Property Name="TotalPR" Type="Double" />
+          <Property Name="TotalPK" Type="Double" />
+          <Property Name="TotalLM" Type="Double" />
+          <Property Name="TotalHandPerTon" Type="Double" />
+          <Property Name="TotalBagPerPerson" Type="Double" />
+          <Property Name="EntryBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EntryDate" Type="DateTime" Precision="3" />
+          <Property Name="EntryTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="DailyPrecisionWindingProduction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductionId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SINo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="JobProcessId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RefOrderNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PrDate" Type="DateTime" Precision="3" />
+          <Property Name="ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ExpType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="MachineRPM" Type="Double" />
+          <Property Name="MachineTPI" Type="Double" />
+          <Property Name="ShiftAHours" Type="Double" />
+          <Property Name="ShiftAMC" Type="Double" />
+          <Property Name="ShiftASpandle" Type="Double" />
+          <Property Name="ShiftAProduction" Type="Double" />
+          <Property Name="ShiftBHours" Type="Double" />
+          <Property Name="ShiftBMC" Type="Double" />
+          <Property Name="ShiftBSpandle" Type="Double" />
+          <Property Name="ShiftBProduction" Type="Double" />
+          <Property Name="ShiftCHours" Type="Double" />
+          <Property Name="ShiftCMC" Type="Double" />
+          <Property Name="ShiftCSpandle" Type="Double" />
+          <Property Name="ShiftCProduction" Type="Double" />
+          <Property Name="TotalMC" Type="Double" />
+          <Property Name="AverageSize" Type="Double" />
+          <Property Name="TotalProductionKg" Type="Double" />
+          <Property Name="TargetEfficiencyPercent" Type="Double" />
+          <Property Name="TargetEfficiency" Type="Double" />
+          <Property Name="EfficiencyAchievedPercent" Type="Double" />
+          <Property Name="HundredPercentEfficiencyProduction" Type="Double" />
+          <Property Name="AverageCountOperated" Type="Double" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EntryByUserId" Type="Int64" />
+          <Property Name="EntryDateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="DailyPrecisionWindingProduction2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductionId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SINo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="JobProcessId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RefOrderNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PrDate" Type="DateTime" Precision="3" />
+          <Property Name="ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ExpType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="MachineRPM" Type="Double" />
+          <Property Name="MachineTPI" Type="Double" />
+          <Property Name="ShiftAMC" Type="Double" />
+          <Property Name="ShiftASize" Type="Double" />
+          <Property Name="ShiftAProduction" Type="Double" />
+          <Property Name="ShiftBMC" Type="Double" />
+          <Property Name="ShiftBSize" Type="Double" />
+          <Property Name="ShiftBProduction" Type="Double" />
+          <Property Name="ShiftCMC" Type="Double" />
+          <Property Name="ShiftCSize" Type="Double" />
+          <Property Name="ShiftCProduction" Type="Double" />
+          <Property Name="TotalMC" Type="Double" />
+          <Property Name="AverageSize" Type="Double" />
+          <Property Name="TotalProductionKg" Type="Double" />
+          <Property Name="ShiftAEfficiencyAchievedPercent" Type="Double" />
+          <Property Name="ShiftBEfficiencyAchievedPercent" Type="Double" />
+          <Property Name="ShiftCEfficiencyAchievedPercent" Type="Double" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EntryByUserId" Type="Int64" />
+          <Property Name="EntryDateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="DailySpinningWindingProduction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductionId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SINo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="JobProcessId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RefOrderNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PrDate" Type="DateTime" Precision="3" />
+          <Property Name="ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ExpType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="MachineRPM" Type="Double" />
+          <Property Name="MachineTPI" Type="Double" />
+          <Property Name="ShiftAHours" Type="Double" />
+          <Property Name="ShiftAMC" Type="Double" />
+          <Property Name="ShiftASpandle" Type="Double" />
+          <Property Name="ShiftAProduction" Type="Double" />
+          <Property Name="ShiftBHours" Type="Double" />
+          <Property Name="ShiftBMC" Type="Double" />
+          <Property Name="ShiftBSpandle" Type="Double" />
+          <Property Name="ShiftBProduction" Type="Double" />
+          <Property Name="ShiftCHours" Type="Double" />
+          <Property Name="ShiftCMC" Type="Double" />
+          <Property Name="ShiftCSpandle" Type="Double" />
+          <Property Name="ShiftCProduction" Type="Double" />
+          <Property Name="TotalMC" Type="Double" />
+          <Property Name="AverageSize" Type="Double" />
+          <Property Name="TotalProductionKg" Type="Double" />
+          <Property Name="TargetEfficiencyPercent" Type="Double" />
+          <Property Name="TargetEfficiency" Type="Double" />
+          <Property Name="EfficiencyAchievedPercent" Type="Double" />
+          <Property Name="HundredPercentEfficiencyProduction" Type="Double" />
+          <Property Name="AverageCountOperated" Type="Double" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EntryByUserId" Type="Int64" />
+          <Property Name="EntryDateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="DailyTwistingProduction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductionId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SINo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="JobProcessId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RefOrderNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PrDate" Type="DateTime" Precision="3" />
+          <Property Name="ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ExpType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="MachineRPM" Type="Double" />
+          <Property Name="MachineTPI" Type="Double" />
+          <Property Name="ShiftAHours" Type="Double" />
+          <Property Name="ShiftAMC" Type="Double" />
+          <Property Name="ShiftASpandle" Type="Double" />
+          <Property Name="ShiftAProduction" Type="Double" />
+          <Property Name="ShiftBHours" Type="Double" />
+          <Property Name="ShiftBMC" Type="Double" />
+          <Property Name="ShiftBSpandle" Type="Double" />
+          <Property Name="ShiftBProduction" Type="Double" />
+          <Property Name="ShiftCHours" Type="Double" />
+          <Property Name="ShiftCMC" Type="Double" />
+          <Property Name="ShiftCSpandle" Type="Double" />
+          <Property Name="ShiftCProduction" Type="Double" />
+          <Property Name="TotalMC" Type="Double" />
+          <Property Name="AverageSize" Type="Double" />
+          <Property Name="TotalProductionKg" Type="Double" />
+          <Property Name="TargetEfficiencyPercent" Type="Double" />
+          <Property Name="TargetEfficiency" Type="Double" />
+          <Property Name="EfficiencyAchievedPercent" Type="Double" />
+          <Property Name="HundredPercentEfficiencyProduction" Type="Double" />
+          <Property Name="AverageCountOperated" Type="Double" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EntryByUserId" Type="Int64" />
+          <Property Name="EntryDateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="FactoryUnit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryUnitName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="FactoryUnitLocation" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LoomFinalize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="Yearn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Item" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Weight" Type="Double" />
+          <Property Name="QtyPcs" Type="Double" />
+          <Property Name="EntryDate" Type="DateTime" Precision="3" />
+          <Property Name="DDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="LoomProduction">
+          <Key>
+            <PropertyRef Name="SerialNo" />
+          </Key>
+          <Property Name="SerialNo" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="InvoiceNo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ItemId" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="YarnId" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="YarnName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ProductionDate" Type="DateTime" Precision="3" />
+          <Property Name="QtyPcs" Type="Double" />
+          <Property Name="WeightPerPcs" Type="Double" />
+          <Property Name="RatePcs" Type="Double" />
+          <Property Name="TotalKg" Type="Double" />
+          <Property Name="AmountTk" Type="Double" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EntryBy" Type="Int64" />
+          <Property Name="Status" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Unit" Type="Int64" />
+        </EntityType>
+        <EntityType Name="PackingFinalize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="Item" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="McA" Type="Double" />
+          <Property Name="ProductionA" Type="Double" />
+          <Property Name="McB" Type="Double" />
+          <Property Name="ProductionB" Type="Double" />
+          <Property Name="EntryDate" Type="DateTime" Precision="3" />
+          <Property Name="DDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PowerHistoryFinalize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="AshiftPowerLoseT" Type="Double" />
+          <Property Name="AshiftPowerFailm" Type="Double" />
+          <Property Name="AshiftGRunning" Type="Double" />
+          <Property Name="BshiftPowerLoseT" Type="Double" />
+          <Property Name="BshiftPowerFailm" Type="Double" />
+          <Property Name="BshiftGRunning" Type="Double" />
+          <Property Name="CshiftPowerLoseT" Type="Double" />
+          <Property Name="CshiftPowerFailm" Type="Double" />
+          <Property Name="CshiftGRunning" Type="Double" />
+          <Property Name="EntryDate" Type="DateTime" Precision="3" />
+          <Property Name="DDate" Type="DateTime" Precision="3" />
+          <Property Name="ABCTotalPowerLoseT" Type="Double" />
+          <Property Name="ABCTotalPowerFailm" Type="Double" />
+          <Property Name="ABCTotalGRunning" Type="Double" />
+        </EntityType>
+        <EntityType Name="PowerHistoryLoomFinalize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="AshiftPowerLoseT" Type="Double" />
+          <Property Name="AshiftPowerFailm" Type="Double" />
+          <Property Name="AshiftGRunning" Type="Double" />
+          <Property Name="BshiftPowerLoseT" Type="Double" />
+          <Property Name="BshiftPowerFailm" Type="Double" />
+          <Property Name="BshiftGRunning" Type="Double" />
+          <Property Name="CshiftPowerLoseT" Type="Double" />
+          <Property Name="CshiftPowerFailm" Type="Double" />
+          <Property Name="CshiftGRunning" Type="Double" />
+          <Property Name="EntryDate" Type="DateTime" Precision="3" />
+          <Property Name="DDate" Type="DateTime" Precision="3" />
+          <Property Name="ABCTotalPowerLoseT" Type="Double" />
+          <Property Name="ABCTotalPowerFailm" Type="Double" />
+          <Property Name="ABCTotalGRunning" Type="Double" />
+        </EntityType>
+        <EntityType Name="SpinningTwistingPrecisionProductionFinalize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="SLNo" Type="Int32" />
+          <Property Name="TType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ExpType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="MachineRPM" Type="Double" />
+          <Property Name="MachineTPI" Type="Double" />
+          <Property Name="ShiftAHours" Type="Double" />
+          <Property Name="ShiftAMC" Type="Double" />
+          <Property Name="ShiftASpandle" Type="Double" />
+          <Property Name="ShiftAProduction" Type="Double" />
+          <Property Name="ShiftBHours" Type="Double" />
+          <Property Name="ShiftBMC" Type="Double" />
+          <Property Name="ShiftBSpandle" Type="Double" />
+          <Property Name="ShiftBProduction" Type="Double" />
+          <Property Name="ShiftCHours" Type="Double" />
+          <Property Name="ShiftCMC" Type="Double" />
+          <Property Name="ShiftCSpandle" Type="Double" />
+          <Property Name="ShiftCProduction" Type="Double" />
+          <Property Name="TotalProductionKg" Type="Double" />
+          <Property Name="TargetEfficiencyPercent" Type="Double" />
+          <Property Name="TargetEfficiency" Type="Double" />
+          <Property Name="EfficiencyAchievedPercent" Type="Double" />
+          <Property Name="HundredPercentEfficiencyProduction" Type="Double" />
+          <Property Name="EntryDateTime" Type="DateTime" Precision="3" />
+          <Property Name="DDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SummaryLoomFinalize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="Section" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="A_Hands" Type="Double" />
+          <Property Name="B_Hands" Type="Double" />
+          <Property Name="C_Hands" Type="Double" />
+          <Property Name="Total_ABC_Hands" Type="Double" />
+          <Property Name="ProductionEntryDate" Type="DateTime" Precision="3" />
+          <Property Name="DDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SummarySpinningFinalize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="Section" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="A_Hands" Type="Double" />
+          <Property Name="B_Hands" Type="Double" />
+          <Property Name="C_Hands" Type="Double" />
+          <Property Name="Total_ABC_Hands" Type="Double" />
+          <Property Name="ProductionEntryDate" Type="DateTime" Precision="3" />
+          <Property Name="DDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="DailyFinalize2">
+          <Key>
+            <PropertyRef Name="DDate" />
+            <PropertyRef Name="Unit" />
+          </Key>
+          <Property Name="DDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Unit" Type="Int64" Nullable="false" />
+          <Property Name="TotalSP" Type="Double" />
+          <Property Name="TotalTW" Type="Double" />
+          <Property Name="TotalPR" Type="Double" />
+          <Property Name="TotalPK" Type="Double" />
+          <Property Name="TotalLM" Type="Double" />
+          <Property Name="TotalHandPerTon" Type="Double" />
+          <Property Name="TotalBagPerPerson" Type="Double" />
+          <Property Name="EntryBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EntryDate" Type="DateTime" Precision="3" />
+          <Property Name="EntryTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="DailyProductionItem">
+          <Key>
+            <PropertyRef Name="PackingProductionKG" />
+            <PropertyRef Name="PackingProductionMT" />
+          </Key>
+          <Property Name="SerialNo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="VarItemID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VarItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FactoryUnitId" Type="Int32" />
+          <Property Name="FactoryUnitName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="McA" Type="Double" />
+          <Property Name="AKg" Type="Double" />
+          <Property Name="McB" Type="Double" />
+          <Property Name="BKg" Type="Double" />
+          <Property Name="PackingProductionKG" Type="Double" Nullable="false" />
+          <Property Name="PackingProductionMT" Type="Double" Nullable="false" />
+          <Property Name="ProductionDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="DepartmentType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="TblType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FinishGoodItem">
+          <Key>
+            <PropertyRef Name="VarCount" />
+          </Key>
+          <Property Name="VarItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VarItemName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NameShort" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Quality" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="VarCount" Type="Double" Nullable="false" />
+          <Property Name="Thickness" Type="Double" />
+          <Property Name="ThicknessMulti" Type="Double" />
+          <Property Name="ItemType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LoomFinalize2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="Yearn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Item" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Weight" Type="Double" />
+          <Property Name="QtyPcs" Type="Double" />
+          <Property Name="EntryDate" Type="DateTime" Precision="3" />
+          <Property Name="DDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PackingFinalize2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="Item" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="McA" Type="Double" />
+          <Property Name="ProductionA" Type="Double" />
+          <Property Name="McB" Type="Double" />
+          <Property Name="ProductionB" Type="Double" />
+          <Property Name="EntryDate" Type="DateTime" Precision="3" />
+          <Property Name="DDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PowerHistoryFinalize2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="AshiftPowerLoseT" Type="Double" />
+          <Property Name="AshiftPowerFailm" Type="Double" />
+          <Property Name="AshiftGRunning" Type="Double" />
+          <Property Name="BshiftPowerLoseT" Type="Double" />
+          <Property Name="BshiftPowerFailm" Type="Double" />
+          <Property Name="BshiftGRunning" Type="Double" />
+          <Property Name="CshiftPowerLoseT" Type="Double" />
+          <Property Name="CshiftPowerFailm" Type="Double" />
+          <Property Name="CshiftGRunning" Type="Double" />
+          <Property Name="EntryDate" Type="DateTime" Precision="3" />
+          <Property Name="DDate" Type="DateTime" Precision="3" />
+          <Property Name="ABCTotalPowerLoseT" Type="Double" />
+          <Property Name="ABCTotalPowerFailm" Type="Double" />
+          <Property Name="ABCTotalGRunning" Type="Double" />
+        </EntityType>
+        <EntityType Name="PowerHistoryLoomFinalize2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="AshiftPowerLoseT" Type="Double" />
+          <Property Name="AshiftPowerFailm" Type="Double" />
+          <Property Name="AshiftGRunning" Type="Double" />
+          <Property Name="BshiftPowerLoseT" Type="Double" />
+          <Property Name="BshiftPowerFailm" Type="Double" />
+          <Property Name="BshiftGRunning" Type="Double" />
+          <Property Name="CshiftPowerLoseT" Type="Double" />
+          <Property Name="CshiftPowerFailm" Type="Double" />
+          <Property Name="CshiftGRunning" Type="Double" />
+          <Property Name="EntryDate" Type="DateTime" Precision="3" />
+          <Property Name="DDate" Type="DateTime" Precision="3" />
+          <Property Name="ABCTotalPowerLoseT" Type="Double" />
+          <Property Name="ABCTotalPowerFailm" Type="Double" />
+          <Property Name="ABCTotalGRunning" Type="Double" />
+        </EntityType>
+        <EntityType Name="PrecisionProductionFinalize2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ShiftAMC" Type="Double" />
+          <Property Name="ShiftASize" Type="Double" />
+          <Property Name="ShiftAProduction" Type="Double" />
+          <Property Name="ShiftBMC" Type="Double" />
+          <Property Name="ShiftBSize" Type="Double" />
+          <Property Name="ShiftBProduction" Type="Double" />
+          <Property Name="ShiftCMC" Type="Double" />
+          <Property Name="ShiftCSize" Type="Double" />
+          <Property Name="ShiftCProduction" Type="Double" />
+          <Property Name="TotalProductionKg" Type="Double" />
+          <Property Name="TotalMC" Type="Double" />
+          <Property Name="AverageSize" Type="Double" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EntryDateTime" Type="DateTime" Precision="3" />
+          <Property Name="DDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SpinningTwistingProductionFinalize2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="SLNo" Type="Int32" />
+          <Property Name="TType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ExpType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="MachineRPM" Type="Double" />
+          <Property Name="MachineTPI" Type="Double" />
+          <Property Name="ShiftAHours" Type="Double" />
+          <Property Name="ShiftAMC" Type="Double" />
+          <Property Name="ShiftASpandle" Type="Double" />
+          <Property Name="ShiftAProduction" Type="Double" />
+          <Property Name="ShiftBHours" Type="Double" />
+          <Property Name="ShiftBMC" Type="Double" />
+          <Property Name="ShiftBSpandle" Type="Double" />
+          <Property Name="ShiftBProduction" Type="Double" />
+          <Property Name="ShiftCHours" Type="Double" />
+          <Property Name="ShiftCMC" Type="Double" />
+          <Property Name="ShiftCSpandle" Type="Double" />
+          <Property Name="ShiftCProduction" Type="Double" />
+          <Property Name="TotalProductionKg" Type="Double" />
+          <Property Name="TargetEfficiencyPercent" Type="Double" />
+          <Property Name="TargetEfficiency" Type="Double" />
+          <Property Name="EfficiencyAchievedPercent" Type="Double" />
+          <Property Name="HundredPercentEfficiencyProduction" Type="Double" />
+          <Property Name="EntryDateTime" Type="DateTime" Precision="3" />
+          <Property Name="DDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SummaryLoomFinalize2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="Section" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="A_Hands" Type="Double" />
+          <Property Name="B_Hands" Type="Double" />
+          <Property Name="C_Hands" Type="Double" />
+          <Property Name="Total_ABC_Hands" Type="Double" />
+          <Property Name="ProductionEntryDate" Type="DateTime" Precision="3" />
+          <Property Name="DDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SummarySpinningFinalize2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Unit" Type="Int64" />
+          <Property Name="Section" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="A_Hands" Type="Double" />
+          <Property Name="B_Hands" Type="Double" />
+          <Property Name="C_Hands" Type="Double" />
+          <Property Name="Total_ABC_Hands" Type="Double" />
+          <Property Name="ProductionEntryDate" Type="DateTime" Precision="3" />
+          <Property Name="DDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ProductionsFinalizeModelStoreContainer" CdmEntityContainer="ProductionsFinalizeEntities1">
+          <FunctionImportMapping FunctionImportName="SaveFinalize" FunctionName="ProductionsFinalizeModel.Store.SaveFinalize" />
+          <FunctionImportMapping FunctionImportName="split" FunctionName="ProductionsFinalizeModel.Store.split">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProductionsFinalizeModel.split_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="val" ColumnName="val" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SaveFinalize2" FunctionName="ProductionsFinalizeModel.Store.SaveFinalize2" />
+          <EntitySetMapping Name="DailyFinalizes">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.DailyFinalize">
+              <MappingFragment StoreEntitySet="DailyFinalize">
+                <ScalarProperty Name="EntryTime" ColumnName="EntryTime" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="EntryBy" ColumnName="EntryBy" />
+                <ScalarProperty Name="TotalBagPerPerson" ColumnName="TotalBagPerPerson" />
+                <ScalarProperty Name="TotalHandPerTon" ColumnName="TotalHandPerTon" />
+                <ScalarProperty Name="TotalLM" ColumnName="TotalLM" />
+                <ScalarProperty Name="TotalPK" ColumnName="TotalPK" />
+                <ScalarProperty Name="TotalPR" ColumnName="TotalPR" />
+                <ScalarProperty Name="TotalTW" ColumnName="TotalTW" />
+                <ScalarProperty Name="TotalSP" ColumnName="TotalSP" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DailyPrecisionWindingProductions">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.DailyPrecisionWindingProduction">
+              <MappingFragment StoreEntitySet="DailyPrecisionWindingProduction">
+                <ScalarProperty Name="EntryDateTime" ColumnName="EntryDateTime" />
+                <ScalarProperty Name="EntryByUserId" ColumnName="EntryByUserId" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="AverageCountOperated" ColumnName="AverageCountOperated" />
+                <ScalarProperty Name="HundredPercentEfficiencyProduction" ColumnName="HundredPercentEfficiencyProduction" />
+                <ScalarProperty Name="EfficiencyAchievedPercent" ColumnName="EfficiencyAchievedPercent" />
+                <ScalarProperty Name="TargetEfficiency" ColumnName="TargetEfficiency" />
+                <ScalarProperty Name="TargetEfficiencyPercent" ColumnName="TargetEfficiencyPercent" />
+                <ScalarProperty Name="TotalProductionKg" ColumnName="TotalProductionKg" />
+                <ScalarProperty Name="AverageSize" ColumnName="AverageSize" />
+                <ScalarProperty Name="TotalMC" ColumnName="TotalMC" />
+                <ScalarProperty Name="ShiftCProduction" ColumnName="ShiftCProduction" />
+                <ScalarProperty Name="ShiftCSpandle" ColumnName="ShiftCSpandle" />
+                <ScalarProperty Name="ShiftCMC" ColumnName="ShiftCMC" />
+                <ScalarProperty Name="ShiftCHours" ColumnName="ShiftCHours" />
+                <ScalarProperty Name="ShiftBProduction" ColumnName="ShiftBProduction" />
+                <ScalarProperty Name="ShiftBSpandle" ColumnName="ShiftBSpandle" />
+                <ScalarProperty Name="ShiftBMC" ColumnName="ShiftBMC" />
+                <ScalarProperty Name="ShiftBHours" ColumnName="ShiftBHours" />
+                <ScalarProperty Name="ShiftAProduction" ColumnName="ShiftAProduction" />
+                <ScalarProperty Name="ShiftASpandle" ColumnName="ShiftASpandle" />
+                <ScalarProperty Name="ShiftAMC" ColumnName="ShiftAMC" />
+                <ScalarProperty Name="ShiftAHours" ColumnName="ShiftAHours" />
+                <ScalarProperty Name="MachineTPI" ColumnName="MachineTPI" />
+                <ScalarProperty Name="MachineRPM" ColumnName="MachineRPM" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="ExpType" ColumnName="ExpType" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="PrDate" ColumnName="PrDate" />
+                <ScalarProperty Name="RefOrderNo" ColumnName="RefOrderNo" />
+                <ScalarProperty Name="JobProcessId" ColumnName="JobProcessId" />
+                <ScalarProperty Name="SINo" ColumnName="SINo" />
+                <ScalarProperty Name="ProductionId" ColumnName="ProductionId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DailyPrecisionWindingProduction2">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.DailyPrecisionWindingProduction2">
+              <MappingFragment StoreEntitySet="DailyPrecisionWindingProduction2">
+                <ScalarProperty Name="EntryDateTime" ColumnName="EntryDateTime" />
+                <ScalarProperty Name="EntryByUserId" ColumnName="EntryByUserId" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="ShiftCEfficiencyAchievedPercent" ColumnName="ShiftCEfficiencyAchievedPercent" />
+                <ScalarProperty Name="ShiftBEfficiencyAchievedPercent" ColumnName="ShiftBEfficiencyAchievedPercent" />
+                <ScalarProperty Name="ShiftAEfficiencyAchievedPercent" ColumnName="ShiftAEfficiencyAchievedPercent" />
+                <ScalarProperty Name="TotalProductionKg" ColumnName="TotalProductionKg" />
+                <ScalarProperty Name="AverageSize" ColumnName="AverageSize" />
+                <ScalarProperty Name="TotalMC" ColumnName="TotalMC" />
+                <ScalarProperty Name="ShiftCProduction" ColumnName="ShiftCProduction" />
+                <ScalarProperty Name="ShiftCSize" ColumnName="ShiftCSize" />
+                <ScalarProperty Name="ShiftCMC" ColumnName="ShiftCMC" />
+                <ScalarProperty Name="ShiftBProduction" ColumnName="ShiftBProduction" />
+                <ScalarProperty Name="ShiftBSize" ColumnName="ShiftBSize" />
+                <ScalarProperty Name="ShiftBMC" ColumnName="ShiftBMC" />
+                <ScalarProperty Name="ShiftAProduction" ColumnName="ShiftAProduction" />
+                <ScalarProperty Name="ShiftASize" ColumnName="ShiftASize" />
+                <ScalarProperty Name="ShiftAMC" ColumnName="ShiftAMC" />
+                <ScalarProperty Name="MachineTPI" ColumnName="MachineTPI" />
+                <ScalarProperty Name="MachineRPM" ColumnName="MachineRPM" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="ExpType" ColumnName="ExpType" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="PrDate" ColumnName="PrDate" />
+                <ScalarProperty Name="RefOrderNo" ColumnName="RefOrderNo" />
+                <ScalarProperty Name="JobProcessId" ColumnName="JobProcessId" />
+                <ScalarProperty Name="SINo" ColumnName="SINo" />
+                <ScalarProperty Name="ProductionId" ColumnName="ProductionId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DailySpinningWindingProductions">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.DailySpinningWindingProduction">
+              <MappingFragment StoreEntitySet="DailySpinningWindingProduction">
+                <ScalarProperty Name="EntryDateTime" ColumnName="EntryDateTime" />
+                <ScalarProperty Name="EntryByUserId" ColumnName="EntryByUserId" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="AverageCountOperated" ColumnName="AverageCountOperated" />
+                <ScalarProperty Name="HundredPercentEfficiencyProduction" ColumnName="HundredPercentEfficiencyProduction" />
+                <ScalarProperty Name="EfficiencyAchievedPercent" ColumnName="EfficiencyAchievedPercent" />
+                <ScalarProperty Name="TargetEfficiency" ColumnName="TargetEfficiency" />
+                <ScalarProperty Name="TargetEfficiencyPercent" ColumnName="TargetEfficiencyPercent" />
+                <ScalarProperty Name="TotalProductionKg" ColumnName="TotalProductionKg" />
+                <ScalarProperty Name="AverageSize" ColumnName="AverageSize" />
+                <ScalarProperty Name="TotalMC" ColumnName="TotalMC" />
+                <ScalarProperty Name="ShiftCProduction" ColumnName="ShiftCProduction" />
+                <ScalarProperty Name="ShiftCSpandle" ColumnName="ShiftCSpandle" />
+                <ScalarProperty Name="ShiftCMC" ColumnName="ShiftCMC" />
+                <ScalarProperty Name="ShiftCHours" ColumnName="ShiftCHours" />
+                <ScalarProperty Name="ShiftBProduction" ColumnName="ShiftBProduction" />
+                <ScalarProperty Name="ShiftBSpandle" ColumnName="ShiftBSpandle" />
+                <ScalarProperty Name="ShiftBMC" ColumnName="ShiftBMC" />
+                <ScalarProperty Name="ShiftBHours" ColumnName="ShiftBHours" />
+                <ScalarProperty Name="ShiftAProduction" ColumnName="ShiftAProduction" />
+                <ScalarProperty Name="ShiftASpandle" ColumnName="ShiftASpandle" />
+                <ScalarProperty Name="ShiftAMC" ColumnName="ShiftAMC" />
+                <ScalarProperty Name="ShiftAHours" ColumnName="ShiftAHours" />
+                <ScalarProperty Name="MachineTPI" ColumnName="MachineTPI" />
+                <ScalarProperty Name="MachineRPM" ColumnName="MachineRPM" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="ExpType" ColumnName="ExpType" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="PrDate" ColumnName="PrDate" />
+                <ScalarProperty Name="RefOrderNo" ColumnName="RefOrderNo" />
+                <ScalarProperty Name="JobProcessId" ColumnName="JobProcessId" />
+                <ScalarProperty Name="SINo" ColumnName="SINo" />
+                <ScalarProperty Name="ProductionId" ColumnName="ProductionId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DailyTwistingProductions">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.DailyTwistingProduction">
+              <MappingFragment StoreEntitySet="DailyTwistingProduction">
+                <ScalarProperty Name="EntryDateTime" ColumnName="EntryDateTime" />
+                <ScalarProperty Name="EntryByUserId" ColumnName="EntryByUserId" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="AverageCountOperated" ColumnName="AverageCountOperated" />
+                <ScalarProperty Name="HundredPercentEfficiencyProduction" ColumnName="HundredPercentEfficiencyProduction" />
+                <ScalarProperty Name="EfficiencyAchievedPercent" ColumnName="EfficiencyAchievedPercent" />
+                <ScalarProperty Name="TargetEfficiency" ColumnName="TargetEfficiency" />
+                <ScalarProperty Name="TargetEfficiencyPercent" ColumnName="TargetEfficiencyPercent" />
+                <ScalarProperty Name="TotalProductionKg" ColumnName="TotalProductionKg" />
+                <ScalarProperty Name="AverageSize" ColumnName="AverageSize" />
+                <ScalarProperty Name="TotalMC" ColumnName="TotalMC" />
+                <ScalarProperty Name="ShiftCProduction" ColumnName="ShiftCProduction" />
+                <ScalarProperty Name="ShiftCSpandle" ColumnName="ShiftCSpandle" />
+                <ScalarProperty Name="ShiftCMC" ColumnName="ShiftCMC" />
+                <ScalarProperty Name="ShiftCHours" ColumnName="ShiftCHours" />
+                <ScalarProperty Name="ShiftBProduction" ColumnName="ShiftBProduction" />
+                <ScalarProperty Name="ShiftBSpandle" ColumnName="ShiftBSpandle" />
+                <ScalarProperty Name="ShiftBMC" ColumnName="ShiftBMC" />
+                <ScalarProperty Name="ShiftBHours" ColumnName="ShiftBHours" />
+                <ScalarProperty Name="ShiftAProduction" ColumnName="ShiftAProduction" />
+                <ScalarProperty Name="ShiftASpandle" ColumnName="ShiftASpandle" />
+                <ScalarProperty Name="ShiftAMC" ColumnName="ShiftAMC" />
+                <ScalarProperty Name="ShiftAHours" ColumnName="ShiftAHours" />
+                <ScalarProperty Name="MachineTPI" ColumnName="MachineTPI" />
+                <ScalarProperty Name="MachineRPM" ColumnName="MachineRPM" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="ExpType" ColumnName="ExpType" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="PrDate" ColumnName="PrDate" />
+                <ScalarProperty Name="RefOrderNo" ColumnName="RefOrderNo" />
+                <ScalarProperty Name="JobProcessId" ColumnName="JobProcessId" />
+                <ScalarProperty Name="SINo" ColumnName="SINo" />
+                <ScalarProperty Name="ProductionId" ColumnName="ProductionId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FactoryUnits">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.FactoryUnit">
+              <MappingFragment StoreEntitySet="FactoryUnit">
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="FactoryUnitLocation" ColumnName="FactoryUnitLocation" />
+                <ScalarProperty Name="FactoryUnitName" ColumnName="FactoryUnitName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoomFinalizes">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.LoomFinalize">
+              <MappingFragment StoreEntitySet="LoomFinalize">
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="QtyPcs" ColumnName="QtyPcs" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Yearn" ColumnName="Yearn" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoomProductions">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.LoomProduction">
+              <MappingFragment StoreEntitySet="LoomProduction">
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="EntryBy" ColumnName="EntryBy" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="AmountTk" ColumnName="AmountTk" />
+                <ScalarProperty Name="TotalKg" ColumnName="TotalKg" />
+                <ScalarProperty Name="RatePcs" ColumnName="RatePcs" />
+                <ScalarProperty Name="WeightPerPcs" ColumnName="WeightPerPcs" />
+                <ScalarProperty Name="QtyPcs" ColumnName="QtyPcs" />
+                <ScalarProperty Name="ProductionDate" ColumnName="ProductionDate" />
+                <ScalarProperty Name="YarnName" ColumnName="YarnName" />
+                <ScalarProperty Name="YarnId" ColumnName="YarnId" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PackingFinalizes">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.PackingFinalize">
+              <MappingFragment StoreEntitySet="PackingFinalize">
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="ProductionB" ColumnName="ProductionB" />
+                <ScalarProperty Name="McB" ColumnName="McB" />
+                <ScalarProperty Name="ProductionA" ColumnName="ProductionA" />
+                <ScalarProperty Name="McA" ColumnName="McA" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PowerHistoryFinalizes">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.PowerHistoryFinalize">
+              <MappingFragment StoreEntitySet="PowerHistoryFinalize">
+                <ScalarProperty Name="ABCTotalGRunning" ColumnName="ABCTotalGRunning" />
+                <ScalarProperty Name="ABCTotalPowerFailm" ColumnName="ABCTotalPowerFailm" />
+                <ScalarProperty Name="ABCTotalPowerLoseT" ColumnName="ABCTotalPowerLoseT" />
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="CshiftGRunning" ColumnName="CshiftGRunning" />
+                <ScalarProperty Name="CshiftPowerFailm" ColumnName="CshiftPowerFailm" />
+                <ScalarProperty Name="CshiftPowerLoseT" ColumnName="CshiftPowerLoseT" />
+                <ScalarProperty Name="BshiftGRunning" ColumnName="BshiftGRunning" />
+                <ScalarProperty Name="BshiftPowerFailm" ColumnName="BshiftPowerFailm" />
+                <ScalarProperty Name="BshiftPowerLoseT" ColumnName="BshiftPowerLoseT" />
+                <ScalarProperty Name="AshiftGRunning" ColumnName="AshiftGRunning" />
+                <ScalarProperty Name="AshiftPowerFailm" ColumnName="AshiftPowerFailm" />
+                <ScalarProperty Name="AshiftPowerLoseT" ColumnName="AshiftPowerLoseT" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PowerHistoryLoomFinalizes">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.PowerHistoryLoomFinalize">
+              <MappingFragment StoreEntitySet="PowerHistoryLoomFinalize">
+                <ScalarProperty Name="ABCTotalGRunning" ColumnName="ABCTotalGRunning" />
+                <ScalarProperty Name="ABCTotalPowerFailm" ColumnName="ABCTotalPowerFailm" />
+                <ScalarProperty Name="ABCTotalPowerLoseT" ColumnName="ABCTotalPowerLoseT" />
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="CshiftGRunning" ColumnName="CshiftGRunning" />
+                <ScalarProperty Name="CshiftPowerFailm" ColumnName="CshiftPowerFailm" />
+                <ScalarProperty Name="CshiftPowerLoseT" ColumnName="CshiftPowerLoseT" />
+                <ScalarProperty Name="BshiftGRunning" ColumnName="BshiftGRunning" />
+                <ScalarProperty Name="BshiftPowerFailm" ColumnName="BshiftPowerFailm" />
+                <ScalarProperty Name="BshiftPowerLoseT" ColumnName="BshiftPowerLoseT" />
+                <ScalarProperty Name="AshiftGRunning" ColumnName="AshiftGRunning" />
+                <ScalarProperty Name="AshiftPowerFailm" ColumnName="AshiftPowerFailm" />
+                <ScalarProperty Name="AshiftPowerLoseT" ColumnName="AshiftPowerLoseT" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SpinningTwistingPrecisionProductionFinalizes">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.SpinningTwistingPrecisionProductionFinalize">
+              <MappingFragment StoreEntitySet="SpinningTwistingPrecisionProductionFinalize">
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="EntryDateTime" ColumnName="EntryDateTime" />
+                <ScalarProperty Name="HundredPercentEfficiencyProduction" ColumnName="HundredPercentEfficiencyProduction" />
+                <ScalarProperty Name="EfficiencyAchievedPercent" ColumnName="EfficiencyAchievedPercent" />
+                <ScalarProperty Name="TargetEfficiency" ColumnName="TargetEfficiency" />
+                <ScalarProperty Name="TargetEfficiencyPercent" ColumnName="TargetEfficiencyPercent" />
+                <ScalarProperty Name="TotalProductionKg" ColumnName="TotalProductionKg" />
+                <ScalarProperty Name="ShiftCProduction" ColumnName="ShiftCProduction" />
+                <ScalarProperty Name="ShiftCSpandle" ColumnName="ShiftCSpandle" />
+                <ScalarProperty Name="ShiftCMC" ColumnName="ShiftCMC" />
+                <ScalarProperty Name="ShiftCHours" ColumnName="ShiftCHours" />
+                <ScalarProperty Name="ShiftBProduction" ColumnName="ShiftBProduction" />
+                <ScalarProperty Name="ShiftBSpandle" ColumnName="ShiftBSpandle" />
+                <ScalarProperty Name="ShiftBMC" ColumnName="ShiftBMC" />
+                <ScalarProperty Name="ShiftBHours" ColumnName="ShiftBHours" />
+                <ScalarProperty Name="ShiftAProduction" ColumnName="ShiftAProduction" />
+                <ScalarProperty Name="ShiftASpandle" ColumnName="ShiftASpandle" />
+                <ScalarProperty Name="ShiftAMC" ColumnName="ShiftAMC" />
+                <ScalarProperty Name="ShiftAHours" ColumnName="ShiftAHours" />
+                <ScalarProperty Name="MachineTPI" ColumnName="MachineTPI" />
+                <ScalarProperty Name="MachineRPM" ColumnName="MachineRPM" />
+                <ScalarProperty Name="ExpType" ColumnName="ExpType" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="TType" ColumnName="TType" />
+                <ScalarProperty Name="SLNo" ColumnName="SLNo" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SummaryLoomFinalizes">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.SummaryLoomFinalize">
+              <MappingFragment StoreEntitySet="SummaryLoomFinalize">
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="ProductionEntryDate" ColumnName="ProductionEntryDate" />
+                <ScalarProperty Name="Total_ABC_Hands" ColumnName="Total_ABC_Hands" />
+                <ScalarProperty Name="C_Hands" ColumnName="C_Hands" />
+                <ScalarProperty Name="B_Hands" ColumnName="B_Hands" />
+                <ScalarProperty Name="A_Hands" ColumnName="A_Hands" />
+                <ScalarProperty Name="Section" ColumnName="Section" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SummarySpinningFinalizes">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.SummarySpinningFinalize">
+              <MappingFragment StoreEntitySet="SummarySpinningFinalize">
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="ProductionEntryDate" ColumnName="ProductionEntryDate" />
+                <ScalarProperty Name="Total_ABC_Hands" ColumnName="Total_ABC_Hands" />
+                <ScalarProperty Name="C_Hands" ColumnName="C_Hands" />
+                <ScalarProperty Name="B_Hands" ColumnName="B_Hands" />
+                <ScalarProperty Name="A_Hands" ColumnName="A_Hands" />
+                <ScalarProperty Name="Section" ColumnName="Section" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DailyFinalize2">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.DailyFinalize2">
+              <MappingFragment StoreEntitySet="DailyFinalize2">
+                <ScalarProperty Name="EntryTime" ColumnName="EntryTime" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="EntryBy" ColumnName="EntryBy" />
+                <ScalarProperty Name="TotalBagPerPerson" ColumnName="TotalBagPerPerson" />
+                <ScalarProperty Name="TotalHandPerTon" ColumnName="TotalHandPerTon" />
+                <ScalarProperty Name="TotalLM" ColumnName="TotalLM" />
+                <ScalarProperty Name="TotalPK" ColumnName="TotalPK" />
+                <ScalarProperty Name="TotalPR" ColumnName="TotalPR" />
+                <ScalarProperty Name="TotalTW" ColumnName="TotalTW" />
+                <ScalarProperty Name="TotalSP" ColumnName="TotalSP" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DailyProductionItems">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.DailyProductionItem">
+              <MappingFragment StoreEntitySet="DailyProductionItem">
+                <ScalarProperty Name="ProductionDate" ColumnName="ProductionDate" />
+                <ScalarProperty Name="PackingProductionMT" ColumnName="PackingProductionMT" />
+                <ScalarProperty Name="PackingProductionKG" ColumnName="PackingProductionKG" />
+                <ScalarProperty Name="BKg" ColumnName="BKg" />
+                <ScalarProperty Name="McB" ColumnName="McB" />
+                <ScalarProperty Name="AKg" ColumnName="AKg" />
+                <ScalarProperty Name="McA" ColumnName="McA" />
+                <ScalarProperty Name="FactoryUnitName" ColumnName="FactoryUnitName" />
+                <ScalarProperty Name="FactoryUnitId" ColumnName="FactoryUnitId" />
+                <ScalarProperty Name="VarItemName" ColumnName="VarItemName" />
+                <ScalarProperty Name="VarItemID" ColumnName="VarItemID" />
+                <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DepartmentTypes">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.DepartmentType">
+              <MappingFragment StoreEntitySet="DepartmentType">
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TblType" ColumnName="TblType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FinishGoodItems">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.FinishGoodItem">
+              <MappingFragment StoreEntitySet="FinishGoodItem">
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+                <ScalarProperty Name="ThicknessMulti" ColumnName="ThicknessMulti" />
+                <ScalarProperty Name="Thickness" ColumnName="Thickness" />
+                <ScalarProperty Name="VarCount" ColumnName="VarCount" />
+                <ScalarProperty Name="Quality" ColumnName="Quality" />
+                <ScalarProperty Name="NameShort" ColumnName="NameShort" />
+                <ScalarProperty Name="VarItemName" ColumnName="VarItemName" />
+                <ScalarProperty Name="VarItemCode" ColumnName="VarItemCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoomFinalize2">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.LoomFinalize2">
+              <MappingFragment StoreEntitySet="LoomFinalize2">
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="QtyPcs" ColumnName="QtyPcs" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Yearn" ColumnName="Yearn" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PackingFinalize2">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.PackingFinalize2">
+              <MappingFragment StoreEntitySet="PackingFinalize2">
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="ProductionB" ColumnName="ProductionB" />
+                <ScalarProperty Name="McB" ColumnName="McB" />
+                <ScalarProperty Name="ProductionA" ColumnName="ProductionA" />
+                <ScalarProperty Name="McA" ColumnName="McA" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PowerHistoryFinalize2">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.PowerHistoryFinalize2">
+              <MappingFragment StoreEntitySet="PowerHistoryFinalize2">
+                <ScalarProperty Name="ABCTotalGRunning" ColumnName="ABCTotalGRunning" />
+                <ScalarProperty Name="ABCTotalPowerFailm" ColumnName="ABCTotalPowerFailm" />
+                <ScalarProperty Name="ABCTotalPowerLoseT" ColumnName="ABCTotalPowerLoseT" />
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="CshiftGRunning" ColumnName="CshiftGRunning" />
+                <ScalarProperty Name="CshiftPowerFailm" ColumnName="CshiftPowerFailm" />
+                <ScalarProperty Name="CshiftPowerLoseT" ColumnName="CshiftPowerLoseT" />
+                <ScalarProperty Name="BshiftGRunning" ColumnName="BshiftGRunning" />
+                <ScalarProperty Name="BshiftPowerFailm" ColumnName="BshiftPowerFailm" />
+                <ScalarProperty Name="BshiftPowerLoseT" ColumnName="BshiftPowerLoseT" />
+                <ScalarProperty Name="AshiftGRunning" ColumnName="AshiftGRunning" />
+                <ScalarProperty Name="AshiftPowerFailm" ColumnName="AshiftPowerFailm" />
+                <ScalarProperty Name="AshiftPowerLoseT" ColumnName="AshiftPowerLoseT" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PowerHistoryLoomFinalize2">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.PowerHistoryLoomFinalize2">
+              <MappingFragment StoreEntitySet="PowerHistoryLoomFinalize2">
+                <ScalarProperty Name="ABCTotalGRunning" ColumnName="ABCTotalGRunning" />
+                <ScalarProperty Name="ABCTotalPowerFailm" ColumnName="ABCTotalPowerFailm" />
+                <ScalarProperty Name="ABCTotalPowerLoseT" ColumnName="ABCTotalPowerLoseT" />
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="CshiftGRunning" ColumnName="CshiftGRunning" />
+                <ScalarProperty Name="CshiftPowerFailm" ColumnName="CshiftPowerFailm" />
+                <ScalarProperty Name="CshiftPowerLoseT" ColumnName="CshiftPowerLoseT" />
+                <ScalarProperty Name="BshiftGRunning" ColumnName="BshiftGRunning" />
+                <ScalarProperty Name="BshiftPowerFailm" ColumnName="BshiftPowerFailm" />
+                <ScalarProperty Name="BshiftPowerLoseT" ColumnName="BshiftPowerLoseT" />
+                <ScalarProperty Name="AshiftGRunning" ColumnName="AshiftGRunning" />
+                <ScalarProperty Name="AshiftPowerFailm" ColumnName="AshiftPowerFailm" />
+                <ScalarProperty Name="AshiftPowerLoseT" ColumnName="AshiftPowerLoseT" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrecisionProductionFinalize2">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.PrecisionProductionFinalize2">
+              <MappingFragment StoreEntitySet="PrecisionProductionFinalize2">
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="EntryDateTime" ColumnName="EntryDateTime" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="AverageSize" ColumnName="AverageSize" />
+                <ScalarProperty Name="TotalMC" ColumnName="TotalMC" />
+                <ScalarProperty Name="TotalProductionKg" ColumnName="TotalProductionKg" />
+                <ScalarProperty Name="ShiftCProduction" ColumnName="ShiftCProduction" />
+                <ScalarProperty Name="ShiftCSize" ColumnName="ShiftCSize" />
+                <ScalarProperty Name="ShiftCMC" ColumnName="ShiftCMC" />
+                <ScalarProperty Name="ShiftBProduction" ColumnName="ShiftBProduction" />
+                <ScalarProperty Name="ShiftBSize" ColumnName="ShiftBSize" />
+                <ScalarProperty Name="ShiftBMC" ColumnName="ShiftBMC" />
+                <ScalarProperty Name="ShiftAProduction" ColumnName="ShiftAProduction" />
+                <ScalarProperty Name="ShiftASize" ColumnName="ShiftASize" />
+                <ScalarProperty Name="ShiftAMC" ColumnName="ShiftAMC" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SpinningTwistingProductionFinalize2">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.SpinningTwistingProductionFinalize2">
+              <MappingFragment StoreEntitySet="SpinningTwistingProductionFinalize2">
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="EntryDateTime" ColumnName="EntryDateTime" />
+                <ScalarProperty Name="HundredPercentEfficiencyProduction" ColumnName="HundredPercentEfficiencyProduction" />
+                <ScalarProperty Name="EfficiencyAchievedPercent" ColumnName="EfficiencyAchievedPercent" />
+                <ScalarProperty Name="TargetEfficiency" ColumnName="TargetEfficiency" />
+                <ScalarProperty Name="TargetEfficiencyPercent" ColumnName="TargetEfficiencyPercent" />
+                <ScalarProperty Name="TotalProductionKg" ColumnName="TotalProductionKg" />
+                <ScalarProperty Name="ShiftCProduction" ColumnName="ShiftCProduction" />
+                <ScalarProperty Name="ShiftCSpandle" ColumnName="ShiftCSpandle" />
+                <ScalarProperty Name="ShiftCMC" ColumnName="ShiftCMC" />
+                <ScalarProperty Name="ShiftCHours" ColumnName="ShiftCHours" />
+                <ScalarProperty Name="ShiftBProduction" ColumnName="ShiftBProduction" />
+                <ScalarProperty Name="ShiftBSpandle" ColumnName="ShiftBSpandle" />
+                <ScalarProperty Name="ShiftBMC" ColumnName="ShiftBMC" />
+                <ScalarProperty Name="ShiftBHours" ColumnName="ShiftBHours" />
+                <ScalarProperty Name="ShiftAProduction" ColumnName="ShiftAProduction" />
+                <ScalarProperty Name="ShiftASpandle" ColumnName="ShiftASpandle" />
+                <ScalarProperty Name="ShiftAMC" ColumnName="ShiftAMC" />
+                <ScalarProperty Name="ShiftAHours" ColumnName="ShiftAHours" />
+                <ScalarProperty Name="MachineTPI" ColumnName="MachineTPI" />
+                <ScalarProperty Name="MachineRPM" ColumnName="MachineRPM" />
+                <ScalarProperty Name="ExpType" ColumnName="ExpType" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="TType" ColumnName="TType" />
+                <ScalarProperty Name="SLNo" ColumnName="SLNo" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SummaryLoomFinalize2">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.SummaryLoomFinalize2">
+              <MappingFragment StoreEntitySet="SummaryLoomFinalize2">
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="ProductionEntryDate" ColumnName="ProductionEntryDate" />
+                <ScalarProperty Name="Total_ABC_Hands" ColumnName="Total_ABC_Hands" />
+                <ScalarProperty Name="C_Hands" ColumnName="C_Hands" />
+                <ScalarProperty Name="B_Hands" ColumnName="B_Hands" />
+                <ScalarProperty Name="A_Hands" ColumnName="A_Hands" />
+                <ScalarProperty Name="Section" ColumnName="Section" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SummarySpinningFinalize2">
+            <EntityTypeMapping TypeName="ProductionsFinalizeModel.SummarySpinningFinalize2">
+              <MappingFragment StoreEntitySet="SummarySpinningFinalize2">
+                <ScalarProperty Name="DDate" ColumnName="DDate" />
+                <ScalarProperty Name="ProductionEntryDate" ColumnName="ProductionEntryDate" />
+                <ScalarProperty Name="Total_ABC_Hands" ColumnName="Total_ABC_Hands" />
+                <ScalarProperty Name="C_Hands" ColumnName="C_Hands" />
+                <ScalarProperty Name="B_Hands" ColumnName="B_Hands" />
+                <ScalarProperty Name="A_Hands" ColumnName="A_Hands" />
+                <ScalarProperty Name="Section" ColumnName="Section" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

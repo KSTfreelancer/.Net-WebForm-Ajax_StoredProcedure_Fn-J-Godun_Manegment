@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProductionsFinalizeModelStoreContainer" CdmEntityContainer="ProductionsFinalizeEntities">
+    <EntitySetMapping Name="DailyPrecisionWindingProductions">
+      <EntityTypeMapping TypeName="ProductionsFinalizeModel.DailyPrecisionWindingProduction">
+        <MappingFragment StoreEntitySet="DailyPrecisionWindingProduction">
+          <ScalarProperty Name="EntryDateTime" ColumnName="EntryDateTime" />
+          <ScalarProperty Name="EntryByUserId" ColumnName="EntryByUserId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="AverageCountOperated" ColumnName="AverageCountOperated" />
+          <ScalarProperty Name="HundredPercentEfficiencyProduction" ColumnName="HundredPercentEfficiencyProduction" />
+          <ScalarProperty Name="EfficiencyAchievedPercent" ColumnName="EfficiencyAchievedPercent" />
+          <ScalarProperty Name="TargetEfficiency" ColumnName="TargetEfficiency" />
+          <ScalarProperty Name="TargetEfficiencyPercent" ColumnName="TargetEfficiencyPercent" />
+          <ScalarProperty Name="TotalProductionKg" ColumnName="TotalProductionKg" />
+          <ScalarProperty Name="AverageSize" ColumnName="AverageSize" />
+          <ScalarProperty Name="TotalMC" ColumnName="TotalMC" />
+          <ScalarProperty Name="ShiftCProduction" ColumnName="ShiftCProduction" />
+          <ScalarProperty Name="ShiftCSpandle" ColumnName="ShiftCSpandle" />
+          <ScalarProperty Name="ShiftCMC" ColumnName="ShiftCMC" />
+          <ScalarProperty Name="ShiftCHours" ColumnName="ShiftCHours" />
+          <ScalarProperty Name="ShiftBProduction" ColumnName="ShiftBProduction" />
+          <ScalarProperty Name="ShiftBSpandle" ColumnName="ShiftBSpandle" />
+          <ScalarProperty Name="ShiftBMC" ColumnName="ShiftBMC" />
+          <ScalarProperty Name="ShiftBHours" ColumnName="ShiftBHours" />
+          <ScalarProperty Name="ShiftAProduction" ColumnName="ShiftAProduction" />
+          <ScalarProperty Name="ShiftASpandle" ColumnName="ShiftASpandle" />
+          <ScalarProperty Name="ShiftAMC" ColumnName="ShiftAMC" />
+          <ScalarProperty Name="ShiftAHours" ColumnName="ShiftAHours" />
+          <ScalarProperty Name="MachineTPI" ColumnName="MachineTPI" />
+          <ScalarProperty Name="MachineRPM" ColumnName="MachineRPM" />
+          <ScalarProperty Name="ExpType" ColumnName="ExpType" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="PrDate" ColumnName="PrDate" />
+          <ScalarProperty Name="RefOrderNo" ColumnName="RefOrderNo" />
+          <ScalarProperty Name="JobProcessId" ColumnName="JobProcessId" />
+          <ScalarProperty Name="SINo" ColumnName="SINo" />
+          <ScalarProperty Name="ProductionId" ColumnName="ProductionId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DailySpinningWindingProductions">
+      <EntityTypeMapping TypeName="ProductionsFinalizeModel.DailySpinningWindingProduction">
+        <MappingFragment StoreEntitySet="DailySpinningWindingProduction">
+          <ScalarProperty Name="EntryDateTime" ColumnName="EntryDateTime" />
+          <ScalarProperty Name="EntryByUserId" ColumnName="EntryByUserId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="AverageCountOperated" ColumnName="AverageCountOperated" />
+          <ScalarProperty Name="HundredPercentEfficiencyProduction" ColumnName="HundredPercentEfficiencyProduction" />
+          <ScalarProperty Name="EfficiencyAchievedPercent" ColumnName="EfficiencyAchievedPercent" />
+          <ScalarProperty Name="TargetEfficiency" ColumnName="TargetEfficiency" />
+          <ScalarProperty Name="TargetEfficiencyPercent" ColumnName="TargetEfficiencyPercent" />
+          <ScalarProperty Name="TotalProductionKg" ColumnName="TotalProductionKg" />
+          <ScalarProperty Name="AverageSize" ColumnName="AverageSize" />
+          <ScalarProperty Name="TotalMC" ColumnName="TotalMC" />
+          <ScalarProperty Name="ShiftCProduction" ColumnName="ShiftCProduction" />
+          <ScalarProperty Name="ShiftCSpandle" ColumnName="ShiftCSpandle" />
+          <ScalarProperty Name="ShiftCMC" ColumnName="ShiftCMC" />
+          <ScalarProperty Name="ShiftCHours" ColumnName="ShiftCHours" />
+          <ScalarProperty Name="ShiftBProduction" ColumnName="ShiftBProduction" />
+          <ScalarProperty Name="ShiftBSpandle" ColumnName="ShiftBSpandle" />
+          <ScalarProperty Name="ShiftBMC" ColumnName="ShiftBMC" />
+          <ScalarProperty Name="ShiftBHours" ColumnName="ShiftBHours" />
+          <ScalarProperty Name="ShiftAProduction" ColumnName="ShiftAProduction" />
+          <ScalarProperty Name="ShiftASpandle" ColumnName="ShiftASpandle" />
+          <ScalarProperty Name="ShiftAMC" ColumnName="ShiftAMC" />
+          <ScalarProperty Name="ShiftAHours" ColumnName="ShiftAHours" />
+          <ScalarProperty Name="MachineTPI" ColumnName="MachineTPI" />
+          <ScalarProperty Name="MachineRPM" ColumnName="MachineRPM" />
+          <ScalarProperty Name="ExpType" ColumnName="ExpType" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="PrDate" ColumnName="PrDate" />
+          <ScalarProperty Name="RefOrderNo" ColumnName="RefOrderNo" />
+          <ScalarProperty Name="JobProcessId" ColumnName="JobProcessId" />
+          <ScalarProperty Name="SINo" ColumnName="SINo" />
+          <ScalarProperty Name="ProductionId" ColumnName="ProductionId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DailyTwistingProductions">
+      <EntityTypeMapping TypeName="ProductionsFinalizeModel.DailyTwistingProduction">
+        <MappingFragment StoreEntitySet="DailyTwistingProduction">
+          <ScalarProperty Name="EntryDateTime" ColumnName="EntryDateTime" />
+          <ScalarProperty Name="EntryByUserId" ColumnName="EntryByUserId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="AverageCountOperated" ColumnName="AverageCountOperated" />
+          <ScalarProperty Name="HundredPercentEfficiencyProduction" ColumnName="HundredPercentEfficiencyProduction" />
+          <ScalarProperty Name="EfficiencyAchievedPercent" ColumnName="EfficiencyAchievedPercent" />
+          <ScalarProperty Name="TargetEfficiency" ColumnName="TargetEfficiency" />
+          <ScalarProperty Name="TargetEfficiencyPercent" ColumnName="TargetEfficiencyPercent" />
+          <ScalarProperty Name="TotalProductionKg" ColumnName="TotalProductionKg" />
+          <ScalarProperty Name="AverageSize" ColumnName="AverageSize" />
+          <ScalarProperty Name="TotalMC" ColumnName="TotalMC" />
+          <ScalarProperty Name="ShiftCProduction" ColumnName="ShiftCProduction" />
+          <ScalarProperty Name="ShiftCSpandle" ColumnName="ShiftCSpandle" />
+          <ScalarProperty Name="ShiftCMC" ColumnName="ShiftCMC" />
+          <ScalarProperty Name="ShiftCHours" ColumnName="ShiftCHours" />
+          <ScalarProperty Name="ShiftBProduction" ColumnName="ShiftBProduction" />
+          <ScalarProperty Name="ShiftBSpandle" ColumnName="ShiftBSpandle" />
+          <ScalarProperty Name="ShiftBMC" ColumnName="ShiftBMC" />
+          <ScalarProperty Name="ShiftBHours" ColumnName="ShiftBHours" />
+          <ScalarProperty Name="ShiftAProduction" ColumnName="ShiftAProduction" />
+          <ScalarProperty Name="ShiftASpandle" ColumnName="ShiftASpandle" />
+          <ScalarProperty Name="ShiftAMC" ColumnName="ShiftAMC" />
+          <ScalarProperty Name="ShiftAHours" ColumnName="ShiftAHours" />
+          <ScalarProperty Name="MachineTPI" ColumnName="MachineTPI" />
+          <ScalarProperty Name="MachineRPM" ColumnName="MachineRPM" />
+          <ScalarProperty Name="ExpType" ColumnName="ExpType" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="PrDate" ColumnName="PrDate" />
+          <ScalarProperty Name="RefOrderNo" ColumnName="RefOrderNo" />
+          <ScalarProperty Name="JobProcessId" ColumnName="JobProcessId" />
+          <ScalarProperty Name="SINo" ColumnName="SINo" />
+          <ScalarProperty Name="ProductionId" ColumnName="ProductionId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FactoryUnits">
+      <EntityTypeMapping TypeName="ProductionsFinalizeModel.FactoryUnit">
+        <MappingFragment StoreEntitySet="FactoryUnit">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="FactoryUnitLocation" ColumnName="FactoryUnitLocation" />
+          <ScalarProperty Name="FactoryUnitName" ColumnName="FactoryUnitName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoomFinalizes">
+      <EntityTypeMapping TypeName="ProductionsFinalizeModel.LoomFinalize">
+        <MappingFragment StoreEntitySet="LoomFinalize">
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="QtyPcs" ColumnName="QtyPcs" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Yearn" ColumnName="Yearn" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoomProductions">
+      <EntityTypeMapping TypeName="ProductionsFinalizeModel.LoomProduction">
+        <MappingFragment StoreEntitySet="LoomProduction">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EntryBy" ColumnName="EntryBy" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="AmountTk" ColumnName="AmountTk" />
+          <ScalarProperty Name="TotalKg" ColumnName="TotalKg" />
+          <ScalarProperty Name="RatePcs" ColumnName="RatePcs" />
+          <ScalarProperty Name="WeightPerPcs" ColumnName="WeightPerPcs" />
+          <ScalarProperty Name="QtyPcs" ColumnName="QtyPcs" />
+          <ScalarProperty Name="ProductionDate" ColumnName="ProductionDate" />
+          <ScalarProperty Name="YarnName" ColumnName="YarnName" />
+          <ScalarProperty Name="YarnId" ColumnName="YarnId" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PowerHistoryFinalizes">
+      <EntityTypeMapping TypeName="ProductionsFinalizeModel.PowerHistoryFinalize">
+        <MappingFragment StoreEntitySet="PowerHistoryFinalize">
+          <ScalarProperty Name="ABCTotalGRunning" ColumnName="ABCTotalGRunning" />
+          <ScalarProperty Name="ABCTotalPowerFailm" ColumnName="ABCTotalPowerFailm" />
+          <ScalarProperty Name="ABCTotalPowerLoseT" ColumnName="ABCTotalPowerLoseT" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="CshiftGRunning" ColumnName="CshiftGRunning" />
+          <ScalarProperty Name="CshiftPowerFailm" ColumnName="CshiftPowerFailm" />
+          <ScalarProperty Name="CshiftPowerLoseT" ColumnName="CshiftPowerLoseT" />
+          <ScalarProperty Name="BshiftGRunning" ColumnName="BshiftGRunning" />
+          <ScalarProperty Name="BshiftPowerFailm" ColumnName="BshiftPowerFailm" />
+          <ScalarProperty Name="BshiftPowerLoseT" ColumnName="BshiftPowerLoseT" />
+          <ScalarProperty Name="AshiftGRunning" ColumnName="AshiftGRunning" />
+          <ScalarProperty Name="AshiftPowerFailm" ColumnName="AshiftPowerFailm" />
+          <ScalarProperty Name="AshiftPowerLoseT" ColumnName="AshiftPowerLoseT" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PowerHistoryLoomFinalizes">
+      <EntityTypeMapping TypeName="ProductionsFinalizeModel.PowerHistoryLoomFinalize">
+        <MappingFragment StoreEntitySet="PowerHistoryLoomFinalize">
+          <ScalarProperty Name="ABCTotalGRunning" ColumnName="ABCTotalGRunning" />
+          <ScalarProperty Name="ABCTotalPowerFailm" ColumnName="ABCTotalPowerFailm" />
+          <ScalarProperty Name="ABCTotalPowerLoseT" ColumnName="ABCTotalPowerLoseT" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="CshiftGRunning" ColumnName="CshiftGRunning" />
+          <ScalarProperty Name="CshiftPowerFailm" ColumnName="CshiftPowerFailm" />
+          <ScalarProperty Name="CshiftPowerLoseT" ColumnName="CshiftPowerLoseT" />
+          <ScalarProperty Name="BshiftGRunning" ColumnName="BshiftGRunning" />
+          <ScalarProperty Name="BshiftPowerFailm" ColumnName="BshiftPowerFailm" />
+          <ScalarProperty Name="BshiftPowerLoseT" ColumnName="BshiftPowerLoseT" />
+          <ScalarProperty Name="AshiftGRunning" ColumnName="AshiftGRunning" />
+          <ScalarProperty Name="AshiftPowerFailm" ColumnName="AshiftPowerFailm" />
+          <ScalarProperty Name="AshiftPowerLoseT" ColumnName="AshiftPowerLoseT" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SummaryLoomFinalizes">
+      <EntityTypeMapping TypeName="ProductionsFinalizeModel.SummaryLoomFinalize">
+        <MappingFragment StoreEntitySet="SummaryLoomFinalize">
+          <ScalarProperty Name="AllTotalHands" ColumnName="AllTotalHands" />
+          <ScalarProperty Name="TotalCHands" ColumnName="TotalCHands" />
+          <ScalarProperty Name="TotalBHands" ColumnName="TotalBHands" />
+          <ScalarProperty Name="TotalAHands" ColumnName="TotalAHands" />
+          <ScalarProperty Name="ProductionEntryDate" ColumnName="ProductionEntryDate" />
+          <ScalarProperty Name="ElectricalTotalHands" ColumnName="ElectricalTotalHands" />
+          <ScalarProperty Name="ElectricalCHands" ColumnName="ElectricalCHands" />
+          <ScalarProperty Name="ElectricalBHands" ColumnName="ElectricalBHands" />
+          <ScalarProperty Name="ElectricalAHands" ColumnName="ElectricalAHands" />
+          <ScalarProperty Name="MechanicalTotalHands" ColumnName="MechanicalTotalHands" />
+          <ScalarProperty Name="MechanicalCHands" ColumnName="MechanicalCHands" />
+          <ScalarProperty Name="MechanicalBHands" ColumnName="MechanicalBHands" />
+          <ScalarProperty Name="MechanicalAHands" ColumnName="MechanicalAHands" />
+          <ScalarProperty Name="StaffTotalHands" ColumnName="StaffTotalHands" />
+          <ScalarProperty Name="StaffCHands" ColumnName="StaffCHands" />
+          <ScalarProperty Name="StaffBHands" ColumnName="StaffBHands" />
+          <ScalarProperty Name="StaffAHands" ColumnName="StaffAHands" />
+          <ScalarProperty Name="PressTotalHands" ColumnName="PressTotalHands" />
+          <ScalarProperty Name="PressCHands" ColumnName="PressCHands" />
+          <ScalarProperty Name="PressBHands" ColumnName="PressBHands" />
+          <ScalarProperty Name="PressAHands" ColumnName="PressAHands" />
+          <ScalarProperty Name="HaCuttHarTotalHands" ColumnName="HaCuttHarTotalHands" />
+          <ScalarProperty Name="HaCuttHarCHands" ColumnName="HaCuttHarCHands" />
+          <ScalarProperty Name="HaCuttHarBHands" ColumnName="HaCuttHarBHands" />
+          <ScalarProperty Name="HaCuttHarAHands" ColumnName="HaCuttHarAHands" />
+          <ScalarProperty Name="LoomVimTotalHands" ColumnName="LoomVimTotalHands" />
+          <ScalarProperty Name="LoomVimCHands" ColumnName="LoomVimCHands" />
+          <ScalarProperty Name="LoomVimBHands" ColumnName="LoomVimBHands" />
+          <ScalarProperty Name="LoomVimAHands" ColumnName="LoomVimAHands" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SummarySpinningFinalizes">
+      <EntityTypeMapping TypeName="ProductionsFinalizeModel.SummarySpinningFinalize">
+        <MappingFragment StoreEntitySet="SummarySpinningFinalize">
+          <ScalarProperty Name="AllTotalHands" ColumnName="AllTotalHands" />
+          <ScalarProperty Name="TotalCHands" ColumnName="TotalCHands" />
+          <ScalarProperty Name="TotalBHands" ColumnName="TotalBHands" />
+          <ScalarProperty Name="TotalAHands" ColumnName="TotalAHands" />
+          <ScalarProperty Name="ProductionEntryDate" ColumnName="ProductionEntryDate" />
+          <ScalarProperty Name="ElectricalTotalHands" ColumnName="ElectricalTotalHands" />
+          <ScalarProperty Name="ElectricalCHands" ColumnName="ElectricalCHands" />
+          <ScalarProperty Name="ElectricalBHands" ColumnName="ElectricalBHands" />
+          <ScalarProperty Name="ElectricalAHands" ColumnName="ElectricalAHands" />
+          <ScalarProperty Name="MechanicalTotalHands" ColumnName="MechanicalTotalHands" />
+          <ScalarProperty Name="MechanicalCHands" ColumnName="MechanicalCHands" />
+          <ScalarProperty Name="MechanicalBHands" ColumnName="MechanicalBHands" />
+          <ScalarProperty Name="MechanicalAHands" ColumnName="MechanicalAHands" />
+          <ScalarProperty Name="StaffTotalHands" ColumnName="StaffTotalHands" />
+          <ScalarProperty Name="StaffCHands" ColumnName="StaffCHands" />
+          <ScalarProperty Name="StaffBHands" ColumnName="StaffBHands" />
+          <ScalarProperty Name="StaffAHands" ColumnName="StaffAHands" />
+          <ScalarProperty Name="RcFcDayTotalHands" ColumnName="RcFcDayTotalHands" />
+          <ScalarProperty Name="RcFcDayCHands" ColumnName="RcFcDayCHands" />
+          <ScalarProperty Name="RcFcDayBHands" ColumnName="RcFcDayBHands" />
+          <ScalarProperty Name="RcFcDayAHands" ColumnName="RcFcDayAHands" />
+          <ScalarProperty Name="QCH_TotalHands" ColumnName="QCH_TotalHands" />
+          <ScalarProperty Name="QCH_CHands" ColumnName="QCH_CHands" />
+          <ScalarProperty Name="QCH_BHands" ColumnName="QCH_BHands" />
+          <ScalarProperty Name="QCH_AHands" ColumnName="QCH_AHands" />
+          <ScalarProperty Name="ProductionTotalHands" ColumnName="ProductionTotalHands" />
+          <ScalarProperty Name="ProductionCHands" ColumnName="ProductionCHands" />
+          <ScalarProperty Name="ProductionBHands" ColumnName="ProductionBHands" />
+          <ScalarProperty Name="ProductionAHands" ColumnName="ProductionAHands" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DailyProductionItems">
+      <EntityTypeMapping TypeName="ProductionsFinalizeModel.DailyProductionItem">
+        <MappingFragment StoreEntitySet="DailyProductionItem">
+          <ScalarProperty Name="ProductionDate" ColumnName="ProductionDate" />
+          <ScalarProperty Name="PackingProductionMT" ColumnName="PackingProductionMT" />
+          <ScalarProperty Name="PackingProductionKG" ColumnName="PackingProductionKG" />
+          <ScalarProperty Name="BKg" ColumnName="BKg" />
+          <ScalarProperty Name="McB" ColumnName="McB" />
+          <ScalarProperty Name="AKg" ColumnName="AKg" />
+          <ScalarProperty Name="McA" ColumnName="McA" />
+          <ScalarProperty Name="FactoryUnitName" ColumnName="FactoryUnitName" />
+          <ScalarProperty Name="FactoryUnitId" ColumnName="FactoryUnitId" />
+          <ScalarProperty Name="VarItemName" ColumnName="VarItemName" />
+          <ScalarProperty Name="VarItemID" ColumnName="VarItemID" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FinishGoodItems">
+      <EntityTypeMapping TypeName="ProductionsFinalizeModel.FinishGoodItem">
+        <MappingFragment StoreEntitySet="FinishGoodItem">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+          <ScalarProperty Name="ThicknessMulti" ColumnName="ThicknessMulti" />
+          <ScalarProperty Name="Thickness" ColumnName="Thickness" />
+          <ScalarProperty Name="VarCount" ColumnName="VarCount" />
+          <ScalarProperty Name="Quality" ColumnName="Quality" />
+          <ScalarProperty Name="NameShort" ColumnName="NameShort" />
+          <ScalarProperty Name="VarItemName" ColumnName="VarItemName" />
+          <ScalarProperty Name="VarItemCode" ColumnName="VarItemCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PackingFinalizes">
+      <EntityTypeMapping TypeName="ProductionsFinalizeModel.PackingFinalize">
+        <MappingFragment StoreEntitySet="PackingFinalize">
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="ProductionB" ColumnName="ProductionB" />
+          <ScalarProperty Name="McB" ColumnName="McB" />
+          <ScalarProperty Name="ProductionA" ColumnName="ProductionA" />
+          <ScalarProperty Name="McA" ColumnName="McA" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecisionProductionFinalizes">
+      <EntityTypeMapping TypeName="ProductionsFinalizeModel.PrecisionProductionFinalize">
+        <MappingFragment StoreEntitySet="PrecisionProductionFinalize">
+          <ScalarProperty Name="EntryDateTime" ColumnName="EntryDateTime" />
+          <ScalarProperty Name="HundredPercentEfficiencyProduction" ColumnName="HundredPercentEfficiencyProduction" />
+          <ScalarProperty Name="EfficiencyAchievedPercent" ColumnName="EfficiencyAchievedPercent" />
+          <ScalarProperty Name="TargetEfficiency" ColumnName="TargetEfficiency" />
+          <ScalarProperty Name="TargetEfficiencyPercent" ColumnName="TargetEfficiencyPercent" />
+          <ScalarProperty Name="TotalProductionKg" ColumnName="TotalProductionKg" />
+          <ScalarProperty Name="ShiftCProduction" ColumnName="ShiftCProduction" />
+          <ScalarProperty Name="ShiftCSpandle" ColumnName="ShiftCSpandle" />
+          <ScalarProperty Name="ShiftCMC" ColumnName="ShiftCMC" />
+          <ScalarProperty Name="ShiftCHours" ColumnName="ShiftCHours" />
+          <ScalarProperty Name="ShiftBProduction" ColumnName="ShiftBProduction" />
+          <ScalarProperty Name="ShiftBSpandle" ColumnName="ShiftBSpandle" />
+          <ScalarProperty Name="ShiftBMC" ColumnName="ShiftBMC" />
+          <ScalarProperty Name="ShiftBHours" ColumnName="ShiftBHours" />
+          <ScalarProperty Name="ShiftAProduction" ColumnName="ShiftAProduction" />
+          <ScalarProperty Name="ShiftASpandle" ColumnName="ShiftASpandle" />
+          <ScalarProperty Name="ShiftAMC" ColumnName="ShiftAMC" />
+          <ScalarProperty Name="ShiftAHours" ColumnName="ShiftAHours" />
+          <ScalarProperty Name="MachineTPI" ColumnName="MachineTPI" />
+          <ScalarProperty Name="MachineRPM" ColumnName="MachineRPM" />
+          <ScalarProperty Name="ExpType" ColumnName="ExpType" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpinningProductionFinalizes">
+      <EntityTypeMapping TypeName="ProductionsFinalizeModel.SpinningProductionFinalize">
+        <MappingFragment StoreEntitySet="SpinningProductionFinalize">
+          <ScalarProperty Name="EntryDateTime" ColumnName="EntryDateTime" />
+          <ScalarProperty Name="HundredPercentEfficiencyProduction" ColumnName="HundredPercentEfficiencyProduction" />
+          <ScalarProperty Name="EfficiencyAchievedPercent" ColumnName="EfficiencyAchievedPercent" />
+          <ScalarProperty Name="TargetEfficiency" ColumnName="TargetEfficiency" />
+          <ScalarProperty Name="TargetEfficiencyPercent" ColumnName="TargetEfficiencyPercent" />
+          <ScalarProperty Name="TotalProductionKg" ColumnName="TotalProductionKg" />
+          <ScalarProperty Name="ShiftCProduction" ColumnName="ShiftCProduction" />
+          <ScalarProperty Name="ShiftCSpandle" ColumnName="ShiftCSpandle" />
+          <ScalarProperty Name="ShiftCMC" ColumnName="ShiftCMC" />
+          <ScalarProperty Name="ShiftCHours" ColumnName="ShiftCHours" />
+          <ScalarProperty Name="ShiftBProduction" ColumnName="ShiftBProduction" />
+          <ScalarProperty Name="ShiftBSpandle" ColumnName="ShiftBSpandle" />
+          <ScalarProperty Name="ShiftBMC" ColumnName="ShiftBMC" />
+          <ScalarProperty Name="ShiftBHours" ColumnName="ShiftBHours" />
+          <ScalarProperty Name="ShiftAProduction" ColumnName="ShiftAProduction" />
+          <ScalarProperty Name="ShiftASpandle" ColumnName="ShiftASpandle" />
+          <ScalarProperty Name="ShiftAMC" ColumnName="ShiftAMC" />
+          <ScalarProperty Name="ShiftAHours" ColumnName="ShiftAHours" />
+          <ScalarProperty Name="MachineTPI" ColumnName="MachineTPI" />
+          <ScalarProperty Name="MachineRPM" ColumnName="MachineRPM" />
+          <ScalarProperty Name="ExpType" ColumnName="ExpType" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TwistingProductionFinalizes">
+      <EntityTypeMapping TypeName="ProductionsFinalizeModel.TwistingProductionFinalize">
+        <MappingFragment StoreEntitySet="TwistingProductionFinalize">
+          <ScalarProperty Name="EntryDateTime" ColumnName="EntryDateTime" />
+          <ScalarProperty Name="HundredPercentEfficiencyProduction" ColumnName="HundredPercentEfficiencyProduction" />
+          <ScalarProperty Name="EfficiencyAchievedPercent" ColumnName="EfficiencyAchievedPercent" />
+          <ScalarProperty Name="TargetEfficiency" ColumnName="TargetEfficiency" />
+          <ScalarProperty Name="TargetEfficiencyPercent" ColumnName="TargetEfficiencyPercent" />
+          <ScalarProperty Name="TotalProductionKg" ColumnName="TotalProductionKg" />
+          <ScalarProperty Name="ShiftCProduction" ColumnName="ShiftCProduction" />
+          <ScalarProperty Name="ShiftCSpandle" ColumnName="ShiftCSpandle" />
+          <ScalarProperty Name="ShiftCMC" ColumnName="ShiftCMC" />
+          <ScalarProperty Name="ShiftCHours" ColumnName="ShiftCHours" />
+          <ScalarProperty Name="ShiftBProduction" ColumnName="ShiftBProduction" />
+          <ScalarProperty Name="ShiftBSpandle" ColumnName="ShiftBSpandle" />
+          <ScalarProperty Name="ShiftBMC" ColumnName="ShiftBMC" />
+          <ScalarProperty Name="ShiftBHours" ColumnName="ShiftBHours" />
+          <ScalarProperty Name="ShiftAProduction" ColumnName="ShiftAProduction" />
+          <ScalarProperty Name="ShiftASpandle" ColumnName="ShiftASpandle" />
+          <ScalarProperty Name="ShiftAMC" ColumnName="ShiftAMC" />
+          <ScalarProperty Name="ShiftAHours" ColumnName="ShiftAHours" />
+          <ScalarProperty Name="MachineTPI" ColumnName="MachineTPI" />
+          <ScalarProperty Name="MachineRPM" ColumnName="MachineRPM" />
+          <ScalarProperty Name="ExpType" ColumnName="ExpType" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

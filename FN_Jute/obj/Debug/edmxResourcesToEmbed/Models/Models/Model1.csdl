@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProductionsFinalizeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ProductionsFinalizeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DailyPrecisionWindingProductions" EntityType="ProductionsFinalizeModel.DailyPrecisionWindingProduction" />
+    <EntitySet Name="DailySpinningWindingProductions" EntityType="ProductionsFinalizeModel.DailySpinningWindingProduction" />
+    <EntitySet Name="DailyTwistingProductions" EntityType="ProductionsFinalizeModel.DailyTwistingProduction" />
+    <EntitySet Name="FactoryUnits" EntityType="ProductionsFinalizeModel.FactoryUnit" />
+    <EntitySet Name="LoomFinalizes" EntityType="ProductionsFinalizeModel.LoomFinalize" />
+    <EntitySet Name="LoomProductions" EntityType="ProductionsFinalizeModel.LoomProduction" />
+    <EntitySet Name="PowerHistoryFinalizes" EntityType="ProductionsFinalizeModel.PowerHistoryFinalize" />
+    <EntitySet Name="PowerHistoryLoomFinalizes" EntityType="ProductionsFinalizeModel.PowerHistoryLoomFinalize" />
+    <EntitySet Name="SummaryLoomFinalizes" EntityType="ProductionsFinalizeModel.SummaryLoomFinalize" />
+    <EntitySet Name="SummarySpinningFinalizes" EntityType="ProductionsFinalizeModel.SummarySpinningFinalize" />
+    <EntitySet Name="DailyProductionItems" EntityType="ProductionsFinalizeModel.DailyProductionItem" />
+    <EntitySet Name="FinishGoodItems" EntityType="ProductionsFinalizeModel.FinishGoodItem" />
+    <EntitySet Name="PackingFinalizes" EntityType="ProductionsFinalizeModel.PackingFinalize" />
+    <EntitySet Name="PrecisionProductionFinalizes" EntityType="ProductionsFinalizeModel.PrecisionProductionFinalize" />
+    <EntitySet Name="SpinningProductionFinalizes" EntityType="ProductionsFinalizeModel.SpinningProductionFinalize" />
+    <EntitySet Name="TwistingProductionFinalizes" EntityType="ProductionsFinalizeModel.TwistingProductionFinalize" />
+  </EntityContainer>
+  <EntityType Name="DailyPrecisionWindingProduction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductionId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SINo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="JobProcessId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RefOrderNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PrDate" Type="DateTime" Precision="3" />
+    <Property Name="ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ExpType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MachineRPM" Type="Double" />
+    <Property Name="MachineTPI" Type="Double" />
+    <Property Name="ShiftAHours" Type="Double" />
+    <Property Name="ShiftAMC" Type="Double" />
+    <Property Name="ShiftASpandle" Type="Double" />
+    <Property Name="ShiftAProduction" Type="Double" />
+    <Property Name="ShiftBHours" Type="Double" />
+    <Property Name="ShiftBMC" Type="Double" />
+    <Property Name="ShiftBSpandle" Type="Double" />
+    <Property Name="ShiftBProduction" Type="Double" />
+    <Property Name="ShiftCHours" Type="Double" />
+    <Property Name="ShiftCMC" Type="Double" />
+    <Property Name="ShiftCSpandle" Type="Double" />
+    <Property Name="ShiftCProduction" Type="Double" />
+    <Property Name="TotalMC" Type="Double" />
+    <Property Name="AverageSize" Type="Double" />
+    <Property Name="TotalProductionKg" Type="Double" />
+    <Property Name="TargetEfficiencyPercent" Type="Double" />
+    <Property Name="TargetEfficiency" Type="Double" />
+    <Property Name="EfficiencyAchievedPercent" Type="Double" />
+    <Property Name="HundredPercentEfficiencyProduction" Type="Double" />
+    <Property Name="AverageCountOperated" Type="Double" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntryByUserId" Type="Int64" />
+    <Property Name="EntryDateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="DailySpinningWindingProduction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductionId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SINo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="JobProcessId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RefOrderNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PrDate" Type="DateTime" Precision="3" />
+    <Property Name="ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ExpType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MachineRPM" Type="Double" />
+    <Property Name="MachineTPI" Type="Double" />
+    <Property Name="ShiftAHours" Type="Double" />
+    <Property Name="ShiftAMC" Type="Double" />
+    <Property Name="ShiftASpandle" Type="Double" />
+    <Property Name="ShiftAProduction" Type="Double" />
+    <Property Name="ShiftBHours" Type="Double" />
+    <Property Name="ShiftBMC" Type="Double" />
+    <Property Name="ShiftBSpandle" Type="Double" />
+    <Property Name="ShiftBProduction" Type="Double" />
+    <Property Name="ShiftCHours" Type="Double" />
+    <Property Name="ShiftCMC" Type="Double" />
+    <Property Name="ShiftCSpandle" Type="Double" />
+    <Property Name="ShiftCProduction" Type="Double" />
+    <Property Name="TotalMC" Type="Double" />
+    <Property Name="AverageSize" Type="Double" />
+    <Property Name="TotalProductionKg" Type="Double" />
+    <Property Name="TargetEfficiencyPercent" Type="Double" />
+    <Property Name="TargetEfficiency" Type="Double" />
+    <Property Name="EfficiencyAchievedPercent" Type="Double" />
+    <Property Name="HundredPercentEfficiencyProduction" Type="Double" />
+    <Property Name="AverageCountOperated" Type="Double" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntryByUserId" Type="Int64" />
+    <Property Name="EntryDateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="DailyTwistingProduction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductionId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SINo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="JobProcessId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RefOrderNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PrDate" Type="DateTime" Precision="3" />
+    <Property Name="ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ExpType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MachineRPM" Type="Double" />
+    <Property Name="MachineTPI" Type="Double" />
+    <Property Name="ShiftAHours" Type="Double" />
+    <Property Name="ShiftAMC" Type="Double" />
+    <Property Name="ShiftASpandle" Type="Double" />
+    <Property Name="ShiftAProduction" Type="Double" />
+    <Property Name="ShiftBHours" Type="Double" />
+    <Property Name="ShiftBMC" Type="Double" />
+    <Property Name="ShiftBSpandle" Type="Double" />
+    <Property Name="ShiftBProduction" Type="Double" />
+    <Property Name="ShiftCHours" Type="Double" />
+    <Property Name="ShiftCMC" Type="Double" />
+    <Property Name="ShiftCSpandle" Type="Double" />
+    <Property Name="ShiftCProduction" Type="Double" />
+    <Property Name="TotalMC" Type="Double" />
+    <Property Name="AverageSize" Type="Double" />
+    <Property Name="TotalProductionKg" Type="Double" />
+    <Property Name="TargetEfficiencyPercent" Type="Double" />
+    <Property Name="TargetEfficiency" Type="Double" />
+    <Property Name="EfficiencyAchievedPercent" Type="Double" />
+    <Property Name="HundredPercentEfficiencyProduction" Type="Double" />
+    <Property Name="AverageCountOperated" Type="Double" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntryByUserId" Type="Int64" />
+    <Property Name="EntryDateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="FactoryUnit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FactoryUnitName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FactoryUnitLocation" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LoomFinalize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Yearn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Item" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Weight" Type="Double" />
+    <Property Name="QtyPcs" Type="Double" />
+    <Property Name="EntryDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="LoomProduction">
+    <Key>
+      <PropertyRef Name="SerialNo" />
+    </Key>
+    <Property Name="SerialNo" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ItemId" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="YarnId" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="YarnName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ProductionDate" Type="DateTime" Precision="3" />
+    <Property Name="QtyPcs" Type="Double" />
+    <Property Name="WeightPerPcs" Type="Double" />
+    <Property Name="RatePcs" Type="Double" />
+    <Property Name="TotalKg" Type="Double" />
+    <Property Name="AmountTk" Type="Double" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntryBy" Type="Int64" />
+    <Property Name="Status" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PowerHistoryFinalize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AshiftPowerLoseT" Type="Double" />
+    <Property Name="AshiftPowerFailm" Type="Double" />
+    <Property Name="AshiftGRunning" Type="Double" />
+    <Property Name="BshiftPowerLoseT" Type="Double" />
+    <Property Name="BshiftPowerFailm" Type="Double" />
+    <Property Name="BshiftGRunning" Type="Double" />
+    <Property Name="CshiftPowerLoseT" Type="Double" />
+    <Property Name="CshiftPowerFailm" Type="Double" />
+    <Property Name="CshiftGRunning" Type="Double" />
+    <Property Name="EntryDate" Type="DateTime" Precision="3" />
+    <Property Name="ABCTotalPowerLoseT" Type="Double" />
+    <Property Name="ABCTotalPowerFailm" Type="Double" />
+    <Property Name="ABCTotalGRunning" Type="Double" />
+  </EntityType>
+  <EntityType Name="PowerHistoryLoomFinalize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AshiftPowerLoseT" Type="Double" />
+    <Property Name="AshiftPowerFailm" Type="Double" />
+    <Property Name="AshiftGRunning" Type="Double" />
+    <Property Name="BshiftPowerLoseT" Type="Double" />
+    <Property Name="BshiftPowerFailm" Type="Double" />
+    <Property Name="BshiftGRunning" Type="Double" />
+    <Property Name="CshiftPowerLoseT" Type="Double" />
+    <Property Name="CshiftPowerFailm" Type="Double" />
+    <Property Name="CshiftGRunning" Type="Double" />
+    <Property Name="EntryDate" Type="DateTime" Precision="3" />
+    <Property Name="ABCTotalPowerLoseT" Type="Double" />
+    <Property Name="ABCTotalPowerFailm" Type="Double" />
+    <Property Name="ABCTotalGRunning" Type="Double" />
+  </EntityType>
+  <EntityType Name="SummaryLoomFinalize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LoomVimAHands" Type="Double" />
+    <Property Name="LoomVimBHands" Type="Double" />
+    <Property Name="LoomVimCHands" Type="Double" />
+    <Property Name="LoomVimTotalHands" Type="Double" />
+    <Property Name="HaCuttHarAHands" Type="Double" />
+    <Property Name="HaCuttHarBHands" Type="Double" />
+    <Property Name="HaCuttHarCHands" Type="Double" />
+    <Property Name="HaCuttHarTotalHands" Type="Double" />
+    <Property Name="PressAHands" Type="Double" />
+    <Property Name="PressBHands" Type="Double" />
+    <Property Name="PressCHands" Type="Double" />
+    <Property Name="PressTotalHands" Type="Double" />
+    <Property Name="StaffAHands" Type="Double" />
+    <Property Name="StaffBHands" Type="Double" />
+    <Property Name="StaffCHands" Type="Double" />
+    <Property Name="StaffTotalHands" Type="Double" />
+    <Property Name="MechanicalAHands" Type="Double" />
+    <Property Name="MechanicalBHands" Type="Double" />
+    <Property Name="MechanicalCHands" Type="Double" />
+    <Property Name="MechanicalTotalHands" Type="Double" />
+    <Property Name="ElectricalAHands" Type="Double" />
+    <Property Name="ElectricalBHands" Type="Double" />
+    <Property Name="ElectricalCHands" Type="Double" />
+    <Property Name="ElectricalTotalHands" Type="Double" />
+    <Property Name="ProductionEntryDate" Type="DateTime" Precision="3" />
+    <Property Name="TotalAHands" Type="Double" />
+    <Property Name="TotalBHands" Type="Double" />
+    <Property Name="TotalCHands" Type="Double" />
+    <Property Name="AllTotalHands" Type="Double" />
+  </EntityType>
+  <EntityType Name="SummarySpinningFinalize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductionAHands" Type="Double" />
+    <Property Name="ProductionBHands" Type="Double" />
+    <Property Name="ProductionCHands" Type="Double" />
+    <Property Name="ProductionTotalHands" Type="Double" />
+    <Property Name="QCH_AHands" Type="Double" />
+    <Property Name="QCH_BHands" Type="Double" />
+    <Property Name="QCH_CHands" Type="Double" />
+    <Property Name="QCH_TotalHands" Type="Double" />
+    <Property Name="RcFcDayAHands" Type="Double" />
+    <Property Name="RcFcDayBHands" Type="Double" />
+    <Property Name="RcFcDayCHands" Type="Double" />
+    <Property Name="RcFcDayTotalHands" Type="Double" />
+    <Property Name="StaffAHands" Type="Double" />
+    <Property Name="StaffBHands" Type="Double" />
+    <Property Name="StaffCHands" Type="Double" />
+    <Property Name="StaffTotalHands" Type="Double" />
+    <Property Name="MechanicalAHands" Type="Double" />
+    <Property Name="MechanicalBHands" Type="Double" />
+    <Property Name="MechanicalCHands" Type="Double" />
+    <Property Name="MechanicalTotalHands" Type="Double" />
+    <Property Name="ElectricalAHands" Type="Double" />
+    <Property Name="ElectricalBHands" Type="Double" />
+    <Property Name="ElectricalCHands" Type="Double" />
+    <Property Name="ElectricalTotalHands" Type="Double" />
+    <Property Name="ProductionEntryDate" Type="DateTime" Precision="3" />
+    <Property Name="TotalAHands" Type="Double" />
+    <Property Name="TotalBHands" Type="Double" />
+    <Property Name="TotalCHands" Type="Double" />
+    <Property Name="AllTotalHands" Type="Double" />
+  </EntityType>
+  <EntityType Name="DailyProductionItem">
+    <Key>
+      <PropertyRef Name="PackingProductionKG" />
+      <PropertyRef Name="PackingProductionMT" />
+    </Key>
+    <Property Name="SerialNo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="VarItemID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VarItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="FactoryUnitId" Type="Int32" />
+    <Property Name="FactoryUnitName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="McA" Type="Double" />
+    <Property Name="AKg" Type="Double" />
+    <Property Name="McB" Type="Double" />
+    <Property Name="BKg" Type="Double" />
+    <Property Name="PackingProductionKG" Type="Double" Nullable="false" />
+    <Property Name="PackingProductionMT" Type="Double" Nullable="false" />
+    <Property Name="ProductionDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="FinishGoodItem">
+    <Key>
+      <PropertyRef Name="VarCount" />
+    </Key>
+    <Property Name="VarItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VarItemName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="NameShort" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Quality" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="VarCount" Type="Double" Nullable="false" />
+    <Property Name="Thickness" Type="Double" />
+    <Property Name="ThicknessMulti" Type="Double" />
+    <Property Name="ItemType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PackingFinalize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Item" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="McA" Type="Double" />
+    <Property Name="ProductionA" Type="Double" />
+    <Property Name="McB" Type="Double" />
+    <Property Name="ProductionB" Type="Double" />
+    <Property Name="EntryDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="PrecisionProductionFinalize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ExpType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MachineRPM" Type="Double" />
+    <Property Name="MachineTPI" Type="Double" />
+    <Property Name="ShiftAHours" Type="Double" />
+    <Property Name="ShiftAMC" Type="Double" />
+    <Property Name="ShiftASpandle" Type="Double" />
+    <Property Name="ShiftAProduction" Type="Double" />
+    <Property Name="ShiftBHours" Type="Double" />
+    <Property Name="ShiftBMC" Type="Double" />
+    <Property Name="ShiftBSpandle" Type="Double" />
+    <Property Name="ShiftBProduction" Type="Double" />
+    <Property Name="ShiftCHours" Type="Double" />
+    <Property Name="ShiftCMC" Type="Double" />
+    <Property Name="ShiftCSpandle" Type="Double" />
+    <Property Name="ShiftCProduction" Type="Double" />
+    <Property Name="TotalProductionKg" Type="Double" />
+    <Property Name="TargetEfficiencyPercent" Type="Double" />
+    <Property Name="TargetEfficiency" Type="Double" />
+    <Property Name="EfficiencyAchievedPercent" Type="Double" />
+    <Property Name="HundredPercentEfficiencyProduction" Type="Double" />
+    <Property Name="EntryDateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SpinningProductionFinalize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ExpType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MachineRPM" Type="Double" />
+    <Property Name="MachineTPI" Type="Double" />
+    <Property Name="ShiftAHours" Type="Double" />
+    <Property Name="ShiftAMC" Type="Double" />
+    <Property Name="ShiftASpandle" Type="Double" />
+    <Property Name="ShiftAProduction" Type="Double" />
+    <Property Name="ShiftBHours" Type="Double" />
+    <Property Name="ShiftBMC" Type="Double" />
+    <Property Name="ShiftBSpandle" Type="Double" />
+    <Property Name="ShiftBProduction" Type="Double" />
+    <Property Name="ShiftCHours" Type="Double" />
+    <Property Name="ShiftCMC" Type="Double" />
+    <Property Name="ShiftCSpandle" Type="Double" />
+    <Property Name="ShiftCProduction" Type="Double" />
+    <Property Name="TotalProductionKg" Type="Double" />
+    <Property Name="TargetEfficiencyPercent" Type="Double" />
+    <Property Name="TargetEfficiency" Type="Double" />
+    <Property Name="EfficiencyAchievedPercent" Type="Double" />
+    <Property Name="HundredPercentEfficiencyProduction" Type="Double" />
+    <Property Name="EntryDateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TwistingProductionFinalize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ExpType" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MachineRPM" Type="Double" />
+    <Property Name="MachineTPI" Type="Double" />
+    <Property Name="ShiftAHours" Type="Double" />
+    <Property Name="ShiftAMC" Type="Double" />
+    <Property Name="ShiftASpandle" Type="Double" />
+    <Property Name="ShiftAProduction" Type="Double" />
+    <Property Name="ShiftBHours" Type="Double" />
+    <Property Name="ShiftBMC" Type="Double" />
+    <Property Name="ShiftBSpandle" Type="Double" />
+    <Property Name="ShiftBProduction" Type="Double" />
+    <Property Name="ShiftCHours" Type="Double" />
+    <Property Name="ShiftCMC" Type="Double" />
+    <Property Name="ShiftCSpandle" Type="Double" />
+    <Property Name="ShiftCProduction" Type="Double" />
+    <Property Name="TotalProductionKg" Type="Double" />
+    <Property Name="TargetEfficiencyPercent" Type="Double" />
+    <Property Name="TargetEfficiency" Type="Double" />
+    <Property Name="EfficiencyAchievedPercent" Type="Double" />
+    <Property Name="HundredPercentEfficiencyProduction" Type="Double" />
+    <Property Name="EntryDateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

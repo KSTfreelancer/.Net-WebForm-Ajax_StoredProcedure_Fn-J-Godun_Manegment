@@ -1,0 +1,836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProductionsFinalizeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DailyFinalize">
+    <Key>
+      <PropertyRef Name="DDate" />
+      <PropertyRef Name="Unit" />
+    </Key>
+    <Property Name="DDate" Type="datetime" Nullable="false" />
+    <Property Name="Unit" Type="bigint" Nullable="false" />
+    <Property Name="TotalSP" Type="float" />
+    <Property Name="TotalTW" Type="float" />
+    <Property Name="TotalPR" Type="float" />
+    <Property Name="TotalPK" Type="float" />
+    <Property Name="TotalLM" Type="float" />
+    <Property Name="TotalHandPerTon" Type="float" />
+    <Property Name="TotalBagPerPerson" Type="float" />
+    <Property Name="EntryBy" Type="varchar" MaxLength="50" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="EntryTime" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.DailyFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DailyFinalize2">
+    <Key>
+      <PropertyRef Name="DDate" />
+      <PropertyRef Name="Unit" />
+    </Key>
+    <Property Name="DDate" Type="datetime" Nullable="false" />
+    <Property Name="Unit" Type="bigint" Nullable="false" />
+    <Property Name="TotalSP" Type="float" />
+    <Property Name="TotalTW" Type="float" />
+    <Property Name="TotalPR" Type="float" />
+    <Property Name="TotalPK" Type="float" />
+    <Property Name="TotalLM" Type="float" />
+    <Property Name="TotalHandPerTon" Type="float" />
+    <Property Name="TotalBagPerPerson" Type="float" />
+    <Property Name="EntryBy" Type="varchar" MaxLength="50" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="EntryTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DailyPrecisionWindingProduction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductionId" Type="nvarchar" MaxLength="50" />
+    <Property Name="SINo" Type="nvarchar" MaxLength="50" />
+    <Property Name="JobProcessId" Type="nvarchar" MaxLength="50" />
+    <Property Name="RefOrderNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrDate" Type="datetime" />
+    <Property Name="ItemCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ItemName" Type="nvarchar" MaxLength="250" />
+    <Property Name="ExpType" Type="nvarchar" MaxLength="250" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="MachineRPM" Type="float" />
+    <Property Name="MachineTPI" Type="float" />
+    <Property Name="ShiftAHours" Type="float" />
+    <Property Name="ShiftAMC" Type="float" />
+    <Property Name="ShiftASpandle" Type="float" />
+    <Property Name="ShiftAProduction" Type="float" />
+    <Property Name="ShiftBHours" Type="float" />
+    <Property Name="ShiftBMC" Type="float" />
+    <Property Name="ShiftBSpandle" Type="float" />
+    <Property Name="ShiftBProduction" Type="float" />
+    <Property Name="ShiftCHours" Type="float" />
+    <Property Name="ShiftCMC" Type="float" />
+    <Property Name="ShiftCSpandle" Type="float" />
+    <Property Name="ShiftCProduction" Type="float" />
+    <Property Name="TotalMC" Type="float" />
+    <Property Name="AverageSize" Type="float" />
+    <Property Name="TotalProductionKg" Type="float" />
+    <Property Name="TargetEfficiencyPercent" Type="float" />
+    <Property Name="TargetEfficiency" Type="float" />
+    <Property Name="EfficiencyAchievedPercent" Type="float" />
+    <Property Name="HundredPercentEfficiencyProduction" Type="float" />
+    <Property Name="AverageCountOperated" Type="float" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="EntryByUserId" Type="bigint" />
+    <Property Name="EntryDateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DailyPrecisionWindingProduction2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductionId" Type="nvarchar" MaxLength="50" />
+    <Property Name="SINo" Type="nvarchar" MaxLength="50" />
+    <Property Name="JobProcessId" Type="nvarchar" MaxLength="50" />
+    <Property Name="RefOrderNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrDate" Type="datetime" />
+    <Property Name="ItemCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ItemName" Type="nvarchar" MaxLength="250" />
+    <Property Name="ExpType" Type="nvarchar" MaxLength="250" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="MachineRPM" Type="float" />
+    <Property Name="MachineTPI" Type="float" />
+    <Property Name="ShiftAMC" Type="float" />
+    <Property Name="ShiftASize" Type="float" />
+    <Property Name="ShiftAProduction" Type="float" />
+    <Property Name="ShiftBMC" Type="float" />
+    <Property Name="ShiftBSize" Type="float" />
+    <Property Name="ShiftBProduction" Type="float" />
+    <Property Name="ShiftCMC" Type="float" />
+    <Property Name="ShiftCSize" Type="float" />
+    <Property Name="ShiftCProduction" Type="float" />
+    <Property Name="TotalMC" Type="float" />
+    <Property Name="AverageSize" Type="float" />
+    <Property Name="TotalProductionKg" Type="float" />
+    <Property Name="ShiftAEfficiencyAchievedPercent" Type="float" />
+    <Property Name="ShiftBEfficiencyAchievedPercent" Type="float" />
+    <Property Name="ShiftCEfficiencyAchievedPercent" Type="float" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="EntryByUserId" Type="bigint" />
+    <Property Name="EntryDateTime" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.DailyProductionItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DailyProductionItem">
+    <Key>
+      <PropertyRef Name="PackingProductionKG" />
+      <PropertyRef Name="PackingProductionMT" />
+    </Key>
+    <Property Name="SerialNo" Type="nvarchar" MaxLength="250" />
+    <Property Name="VarItemID" Type="nvarchar" MaxLength="50" />
+    <Property Name="VarItemName" Type="nvarchar" MaxLength="250" />
+    <Property Name="FactoryUnitId" Type="int" />
+    <Property Name="FactoryUnitName" Type="nvarchar" MaxLength="100" />
+    <Property Name="McA" Type="float" />
+    <Property Name="AKg" Type="float" />
+    <Property Name="McB" Type="float" />
+    <Property Name="BKg" Type="float" />
+    <Property Name="PackingProductionKG" Type="float" Nullable="false" />
+    <Property Name="PackingProductionMT" Type="float" Nullable="false" />
+    <Property Name="ProductionDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DailySpinningWindingProduction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductionId" Type="nvarchar" MaxLength="50" />
+    <Property Name="SINo" Type="nvarchar" MaxLength="50" />
+    <Property Name="JobProcessId" Type="nvarchar" MaxLength="50" />
+    <Property Name="RefOrderNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrDate" Type="datetime" />
+    <Property Name="ItemCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ItemName" Type="nvarchar" MaxLength="250" />
+    <Property Name="ExpType" Type="nvarchar" MaxLength="250" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="MachineRPM" Type="float" />
+    <Property Name="MachineTPI" Type="float" />
+    <Property Name="ShiftAHours" Type="float" />
+    <Property Name="ShiftAMC" Type="float" />
+    <Property Name="ShiftASpandle" Type="float" />
+    <Property Name="ShiftAProduction" Type="float" />
+    <Property Name="ShiftBHours" Type="float" />
+    <Property Name="ShiftBMC" Type="float" />
+    <Property Name="ShiftBSpandle" Type="float" />
+    <Property Name="ShiftBProduction" Type="float" />
+    <Property Name="ShiftCHours" Type="float" />
+    <Property Name="ShiftCMC" Type="float" />
+    <Property Name="ShiftCSpandle" Type="float" />
+    <Property Name="ShiftCProduction" Type="float" />
+    <Property Name="TotalMC" Type="float" />
+    <Property Name="AverageSize" Type="float" />
+    <Property Name="TotalProductionKg" Type="float" />
+    <Property Name="TargetEfficiencyPercent" Type="float" />
+    <Property Name="TargetEfficiency" Type="float" />
+    <Property Name="EfficiencyAchievedPercent" Type="float" />
+    <Property Name="HundredPercentEfficiencyProduction" Type="float" />
+    <Property Name="AverageCountOperated" Type="float" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="EntryByUserId" Type="bigint" />
+    <Property Name="EntryDateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DailyTwistingProduction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductionId" Type="nvarchar" MaxLength="50" />
+    <Property Name="SINo" Type="nvarchar" MaxLength="50" />
+    <Property Name="JobProcessId" Type="nvarchar" MaxLength="50" />
+    <Property Name="RefOrderNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrDate" Type="datetime" />
+    <Property Name="ItemCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ItemName" Type="nvarchar" MaxLength="250" />
+    <Property Name="ExpType" Type="nvarchar" MaxLength="250" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="MachineRPM" Type="float" />
+    <Property Name="MachineTPI" Type="float" />
+    <Property Name="ShiftAHours" Type="float" />
+    <Property Name="ShiftAMC" Type="float" />
+    <Property Name="ShiftASpandle" Type="float" />
+    <Property Name="ShiftAProduction" Type="float" />
+    <Property Name="ShiftBHours" Type="float" />
+    <Property Name="ShiftBMC" Type="float" />
+    <Property Name="ShiftBSpandle" Type="float" />
+    <Property Name="ShiftBProduction" Type="float" />
+    <Property Name="ShiftCHours" Type="float" />
+    <Property Name="ShiftCMC" Type="float" />
+    <Property Name="ShiftCSpandle" Type="float" />
+    <Property Name="ShiftCProduction" Type="float" />
+    <Property Name="TotalMC" Type="float" />
+    <Property Name="AverageSize" Type="float" />
+    <Property Name="TotalProductionKg" Type="float" />
+    <Property Name="TargetEfficiencyPercent" Type="float" />
+    <Property Name="TargetEfficiency" Type="float" />
+    <Property Name="EfficiencyAchievedPercent" Type="float" />
+    <Property Name="HundredPercentEfficiencyProduction" Type="float" />
+    <Property Name="AverageCountOperated" Type="float" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="EntryByUserId" Type="bigint" />
+    <Property Name="EntryDateTime" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.DepartmentType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DepartmentType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="TblType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="FactoryUnit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FactoryUnitName" Type="nvarchar" MaxLength="150" />
+    <Property Name="FactoryUnitLocation" Type="nvarchar" MaxLength="250" />
+    <Property Name="Active" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.FinishGoodItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FinishGoodItem">
+    <Key>
+      <PropertyRef Name="VarCount" />
+    </Key>
+    <Property Name="VarItemCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="VarItemName" Type="nvarchar" MaxLength="500" />
+    <Property Name="NameShort" Type="nvarchar" MaxLength="200" />
+    <Property Name="Quality" Type="nvarchar" MaxLength="250" />
+    <Property Name="VarCount" Type="float" Nullable="false" />
+    <Property Name="Thickness" Type="float" />
+    <Property Name="ThicknessMulti" Type="float" />
+    <Property Name="ItemType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Active" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="LoomFinalize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="Yearn" Type="nvarchar" MaxLength="50" />
+    <Property Name="Item" Type="nvarchar" MaxLength="50" />
+    <Property Name="Weight" Type="float" />
+    <Property Name="QtyPcs" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="DDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.LoomFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LoomFinalize2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="Yearn" Type="nvarchar" MaxLength="50" />
+    <Property Name="Item" Type="nvarchar" MaxLength="50" />
+    <Property Name="Weight" Type="float" />
+    <Property Name="QtyPcs" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="DDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="LoomProduction">
+    <Key>
+      <PropertyRef Name="SerialNo" />
+    </Key>
+    <Property Name="SerialNo" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="250" />
+    <Property Name="ItemId" Type="nvarchar" MaxLength="250" />
+    <Property Name="ItemName" Type="nvarchar" MaxLength="250" />
+    <Property Name="YarnId" Type="nvarchar" MaxLength="250" />
+    <Property Name="YarnName" Type="nvarchar" MaxLength="250" />
+    <Property Name="ProductionDate" Type="datetime" />
+    <Property Name="QtyPcs" Type="float" />
+    <Property Name="WeightPerPcs" Type="float" />
+    <Property Name="RatePcs" Type="float" />
+    <Property Name="TotalKg" Type="float" />
+    <Property Name="AmountTk" Type="float" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="EntryBy" Type="bigint" />
+    <Property Name="Status" Type="nchar" MaxLength="10" />
+    <Property Name="Unit" Type="bigint" />
+  </EntityType>
+  <EntityType Name="PackingFinalize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="Item" Type="nvarchar" MaxLength="50" />
+    <Property Name="McA" Type="float" />
+    <Property Name="ProductionA" Type="float" />
+    <Property Name="McB" Type="float" />
+    <Property Name="ProductionB" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="DDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.PackingFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PackingFinalize2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="Item" Type="nvarchar" MaxLength="50" />
+    <Property Name="McA" Type="float" />
+    <Property Name="ProductionA" Type="float" />
+    <Property Name="McB" Type="float" />
+    <Property Name="ProductionB" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="DDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PowerHistoryFinalize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="AshiftPowerLoseT" Type="float" />
+    <Property Name="AshiftPowerFailm" Type="float" />
+    <Property Name="AshiftGRunning" Type="float" />
+    <Property Name="BshiftPowerLoseT" Type="float" />
+    <Property Name="BshiftPowerFailm" Type="float" />
+    <Property Name="BshiftGRunning" Type="float" />
+    <Property Name="CshiftPowerLoseT" Type="float" />
+    <Property Name="CshiftPowerFailm" Type="float" />
+    <Property Name="CshiftGRunning" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="DDate" Type="datetime" />
+    <Property Name="ABCTotalPowerLoseT" Type="float" />
+    <Property Name="ABCTotalPowerFailm" Type="float" />
+    <Property Name="ABCTotalGRunning" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.PowerHistoryFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PowerHistoryFinalize2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="AshiftPowerLoseT" Type="float" />
+    <Property Name="AshiftPowerFailm" Type="float" />
+    <Property Name="AshiftGRunning" Type="float" />
+    <Property Name="BshiftPowerLoseT" Type="float" />
+    <Property Name="BshiftPowerFailm" Type="float" />
+    <Property Name="BshiftGRunning" Type="float" />
+    <Property Name="CshiftPowerLoseT" Type="float" />
+    <Property Name="CshiftPowerFailm" Type="float" />
+    <Property Name="CshiftGRunning" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="DDate" Type="datetime" />
+    <Property Name="ABCTotalPowerLoseT" Type="float" />
+    <Property Name="ABCTotalPowerFailm" Type="float" />
+    <Property Name="ABCTotalGRunning" Type="float" />
+  </EntityType>
+  <EntityType Name="PowerHistoryLoomFinalize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="AshiftPowerLoseT" Type="float" />
+    <Property Name="AshiftPowerFailm" Type="float" />
+    <Property Name="AshiftGRunning" Type="float" />
+    <Property Name="BshiftPowerLoseT" Type="float" />
+    <Property Name="BshiftPowerFailm" Type="float" />
+    <Property Name="BshiftGRunning" Type="float" />
+    <Property Name="CshiftPowerLoseT" Type="float" />
+    <Property Name="CshiftPowerFailm" Type="float" />
+    <Property Name="CshiftGRunning" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="DDate" Type="datetime" />
+    <Property Name="ABCTotalPowerLoseT" Type="float" />
+    <Property Name="ABCTotalPowerFailm" Type="float" />
+    <Property Name="ABCTotalGRunning" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.PowerHistoryLoomFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PowerHistoryLoomFinalize2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="AshiftPowerLoseT" Type="float" />
+    <Property Name="AshiftPowerFailm" Type="float" />
+    <Property Name="AshiftGRunning" Type="float" />
+    <Property Name="BshiftPowerLoseT" Type="float" />
+    <Property Name="BshiftPowerFailm" Type="float" />
+    <Property Name="BshiftGRunning" Type="float" />
+    <Property Name="CshiftPowerLoseT" Type="float" />
+    <Property Name="CshiftPowerFailm" Type="float" />
+    <Property Name="CshiftGRunning" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="DDate" Type="datetime" />
+    <Property Name="ABCTotalPowerLoseT" Type="float" />
+    <Property Name="ABCTotalPowerFailm" Type="float" />
+    <Property Name="ABCTotalGRunning" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.PrecisionProductionFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PrecisionProductionFinalize2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="ItemName" Type="nvarchar" MaxLength="250" />
+    <Property Name="ShiftAMC" Type="float" />
+    <Property Name="ShiftASize" Type="float" />
+    <Property Name="ShiftAProduction" Type="float" />
+    <Property Name="ShiftBMC" Type="float" />
+    <Property Name="ShiftBSize" Type="float" />
+    <Property Name="ShiftBProduction" Type="float" />
+    <Property Name="ShiftCMC" Type="float" />
+    <Property Name="ShiftCSize" Type="float" />
+    <Property Name="ShiftCProduction" Type="float" />
+    <Property Name="TotalProductionKg" Type="float" />
+    <Property Name="TotalMC" Type="float" />
+    <Property Name="AverageSize" Type="float" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="EntryDateTime" Type="datetime" />
+    <Property Name="DDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'ProductionsFinalize.dbo.SLHandsSummary' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SLHandsSummary">
+          <Property Name="TblType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Id" Type="int" />
+          <Property Name="DepartmentType" Type="nvarchar" MaxLength="300" />
+          <Property Name="AHands" Type="float" />
+          <Property Name="BHands" Type="float" />
+          <Property Name="CHands" Type="float" />
+        </EntityType>-->
+  <EntityType Name="SpinningTwistingPrecisionProductionFinalize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="SLNo" Type="int" />
+    <Property Name="TType" Type="nvarchar" MaxLength="1" />
+    <Property Name="ItemName" Type="nvarchar" MaxLength="250" />
+    <Property Name="ExpType" Type="nvarchar" MaxLength="250" />
+    <Property Name="MachineRPM" Type="float" />
+    <Property Name="MachineTPI" Type="float" />
+    <Property Name="ShiftAHours" Type="float" />
+    <Property Name="ShiftAMC" Type="float" />
+    <Property Name="ShiftASpandle" Type="float" />
+    <Property Name="ShiftAProduction" Type="float" />
+    <Property Name="ShiftBHours" Type="float" />
+    <Property Name="ShiftBMC" Type="float" />
+    <Property Name="ShiftBSpandle" Type="float" />
+    <Property Name="ShiftBProduction" Type="float" />
+    <Property Name="ShiftCHours" Type="float" />
+    <Property Name="ShiftCMC" Type="float" />
+    <Property Name="ShiftCSpandle" Type="float" />
+    <Property Name="ShiftCProduction" Type="float" />
+    <Property Name="TotalProductionKg" Type="float" />
+    <Property Name="TargetEfficiencyPercent" Type="float" />
+    <Property Name="TargetEfficiency" Type="float" />
+    <Property Name="EfficiencyAchievedPercent" Type="float" />
+    <Property Name="HundredPercentEfficiencyProduction" Type="float" />
+    <Property Name="EntryDateTime" Type="datetime" />
+    <Property Name="DDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.SpinningTwistingProductionFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SpinningTwistingProductionFinalize2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="SLNo" Type="int" />
+    <Property Name="TType" Type="nvarchar" MaxLength="1" />
+    <Property Name="ItemName" Type="nvarchar" MaxLength="250" />
+    <Property Name="ExpType" Type="nvarchar" MaxLength="250" />
+    <Property Name="MachineRPM" Type="float" />
+    <Property Name="MachineTPI" Type="float" />
+    <Property Name="ShiftAHours" Type="float" />
+    <Property Name="ShiftAMC" Type="float" />
+    <Property Name="ShiftASpandle" Type="float" />
+    <Property Name="ShiftAProduction" Type="float" />
+    <Property Name="ShiftBHours" Type="float" />
+    <Property Name="ShiftBMC" Type="float" />
+    <Property Name="ShiftBSpandle" Type="float" />
+    <Property Name="ShiftBProduction" Type="float" />
+    <Property Name="ShiftCHours" Type="float" />
+    <Property Name="ShiftCMC" Type="float" />
+    <Property Name="ShiftCSpandle" Type="float" />
+    <Property Name="ShiftCProduction" Type="float" />
+    <Property Name="TotalProductionKg" Type="float" />
+    <Property Name="TargetEfficiencyPercent" Type="float" />
+    <Property Name="TargetEfficiency" Type="float" />
+    <Property Name="EfficiencyAchievedPercent" Type="float" />
+    <Property Name="HundredPercentEfficiencyProduction" Type="float" />
+    <Property Name="EntryDateTime" Type="datetime" />
+    <Property Name="DDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SummaryLoomFinalize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="Section" Type="nvarchar" MaxLength="100" />
+    <Property Name="A_Hands" Type="float" />
+    <Property Name="B_Hands" Type="float" />
+    <Property Name="C_Hands" Type="float" />
+    <Property Name="Total_ABC_Hands" Type="float" />
+    <Property Name="ProductionEntryDate" Type="datetime" />
+    <Property Name="DDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.SummaryLoomFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SummaryLoomFinalize2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="Section" Type="nvarchar" MaxLength="100" />
+    <Property Name="A_Hands" Type="float" />
+    <Property Name="B_Hands" Type="float" />
+    <Property Name="C_Hands" Type="float" />
+    <Property Name="Total_ABC_Hands" Type="float" />
+    <Property Name="ProductionEntryDate" Type="datetime" />
+    <Property Name="DDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SummarySpinningFinalize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="Section" Type="nvarchar" MaxLength="100" />
+    <Property Name="A_Hands" Type="float" />
+    <Property Name="B_Hands" Type="float" />
+    <Property Name="C_Hands" Type="float" />
+    <Property Name="Total_ABC_Hands" Type="float" />
+    <Property Name="ProductionEntryDate" Type="datetime" />
+    <Property Name="DDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ProductionsFinalize.dbo.SummarySpinningFinalize2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SummarySpinningFinalize2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unit" Type="bigint" />
+    <Property Name="Section" Type="nvarchar" MaxLength="100" />
+    <Property Name="A_Hands" Type="float" />
+    <Property Name="B_Hands" Type="float" />
+    <Property Name="C_Hands" Type="float" />
+    <Property Name="Total_ABC_Hands" Type="float" />
+    <Property Name="ProductionEntryDate" Type="datetime" />
+    <Property Name="DDate" Type="datetime" />
+  </EntityType>
+  <Function Name="SaveFinalize" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="STP_ProductionFinalizeString" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="PackingFinalizeString" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="LoomFinalizeString" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SummarySpinningFinalizeString" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SummaryLoomFinalizeString" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="PowerHistoryFinalizeString" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="PowerHistoryLoomFinalizeString" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="OldInvoice" Type="nvarchar" Mode="In" />
+    <Parameter Name="pdFirst" Type="nvarchar" Mode="In" />
+    <Parameter Name="pdSecond" Type="nvarchar" Mode="In" />
+    <Parameter Name="pFirst" Type="nvarchar" Mode="In" />
+    <Parameter Name="date" Type="datetime" Mode="In" />
+    <Parameter Name="Unit" Type="bigint" Mode="In" />
+    <Parameter Name="DailyFinalize" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SaveFinalize2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="STP_ProductionFinalize2String" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Precision_ProductionFinalize2String" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="PackingFinalize2String" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="LoomFinalize2String" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SummarySpinningFinalize2String" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SummaryLoomFinalize2String" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="PowerHistoryFinalize2String" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="PowerHistoryLoomFinalize2String" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="OldInvoice" Type="nvarchar" Mode="In" />
+    <Parameter Name="pdFirst" Type="nvarchar" Mode="In" />
+    <Parameter Name="pdSecond" Type="nvarchar" Mode="In" />
+    <Parameter Name="pFirst" Type="nvarchar" Mode="In" />
+    <Parameter Name="date" Type="datetime" Mode="In" />
+    <Parameter Name="Unit" Type="bigint" Mode="In" />
+    <Parameter Name="DailyFinalize2" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="split" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="delimited" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="delimiter" Type="nvarchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="val" Type="nvarchar(max)" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <EntityContainer Name="ProductionsFinalizeModelStoreContainer">
+    <EntitySet Name="DailyFinalize" EntityType="Self.DailyFinalize" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DailyPrecisionWindingProduction" EntityType="Self.DailyPrecisionWindingProduction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DailyPrecisionWindingProduction2" EntityType="Self.DailyPrecisionWindingProduction2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DailySpinningWindingProduction" EntityType="Self.DailySpinningWindingProduction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DailyTwistingProduction" EntityType="Self.DailyTwistingProduction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FactoryUnit" EntityType="Self.FactoryUnit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoomFinalize" EntityType="Self.LoomFinalize" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoomProduction" EntityType="Self.LoomProduction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PackingFinalize" EntityType="Self.PackingFinalize" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PowerHistoryFinalize" EntityType="Self.PowerHistoryFinalize" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PowerHistoryLoomFinalize" EntityType="Self.PowerHistoryLoomFinalize" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SpinningTwistingPrecisionProductionFinalize" EntityType="Self.SpinningTwistingPrecisionProductionFinalize" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SummaryLoomFinalize" EntityType="Self.SummaryLoomFinalize" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SummarySpinningFinalize" EntityType="Self.SummarySpinningFinalize" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DailyFinalize2" EntityType="Self.DailyFinalize2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DailyFinalize2].[DDate] AS [DDate], 
+    [DailyFinalize2].[Unit] AS [Unit], 
+    [DailyFinalize2].[TotalSP] AS [TotalSP], 
+    [DailyFinalize2].[TotalTW] AS [TotalTW], 
+    [DailyFinalize2].[TotalPR] AS [TotalPR], 
+    [DailyFinalize2].[TotalPK] AS [TotalPK], 
+    [DailyFinalize2].[TotalLM] AS [TotalLM], 
+    [DailyFinalize2].[TotalHandPerTon] AS [TotalHandPerTon], 
+    [DailyFinalize2].[TotalBagPerPerson] AS [TotalBagPerPerson], 
+    [DailyFinalize2].[EntryBy] AS [EntryBy], 
+    [DailyFinalize2].[EntryDate] AS [EntryDate], 
+    [DailyFinalize2].[EntryTime] AS [EntryTime]
+    FROM [dbo].[DailyFinalize2] AS [DailyFinalize2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DailyProductionItem" EntityType="Self.DailyProductionItem" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DailyProductionItem].[SerialNo] AS [SerialNo], 
+    [DailyProductionItem].[VarItemID] AS [VarItemID], 
+    [DailyProductionItem].[VarItemName] AS [VarItemName], 
+    [DailyProductionItem].[FactoryUnitId] AS [FactoryUnitId], 
+    [DailyProductionItem].[FactoryUnitName] AS [FactoryUnitName], 
+    [DailyProductionItem].[McA] AS [McA], 
+    [DailyProductionItem].[AKg] AS [AKg], 
+    [DailyProductionItem].[McB] AS [McB], 
+    [DailyProductionItem].[BKg] AS [BKg], 
+    [DailyProductionItem].[PackingProductionKG] AS [PackingProductionKG], 
+    [DailyProductionItem].[PackingProductionMT] AS [PackingProductionMT], 
+    [DailyProductionItem].[ProductionDate] AS [ProductionDate]
+    FROM [dbo].[DailyProductionItem] AS [DailyProductionItem]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DepartmentType" EntityType="Self.DepartmentType" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DepartmentType].[TblType] AS [TblType], 
+    [DepartmentType].[Id] AS [Id], 
+    [DepartmentType].[DepartmentName] AS [DepartmentName]
+    FROM [dbo].[DepartmentType] AS [DepartmentType]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FinishGoodItem" EntityType="Self.FinishGoodItem" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [FinishGoodItem].[VarItemCode] AS [VarItemCode], 
+    [FinishGoodItem].[VarItemName] AS [VarItemName], 
+    [FinishGoodItem].[NameShort] AS [NameShort], 
+    [FinishGoodItem].[Quality] AS [Quality], 
+    [FinishGoodItem].[VarCount] AS [VarCount], 
+    [FinishGoodItem].[Thickness] AS [Thickness], 
+    [FinishGoodItem].[ThicknessMulti] AS [ThicknessMulti], 
+    [FinishGoodItem].[ItemType] AS [ItemType], 
+    [FinishGoodItem].[Active] AS [Active]
+    FROM [dbo].[FinishGoodItem] AS [FinishGoodItem]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoomFinalize2" EntityType="Self.LoomFinalize2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LoomFinalize2].[Id] AS [Id], 
+    [LoomFinalize2].[Unit] AS [Unit], 
+    [LoomFinalize2].[Yearn] AS [Yearn], 
+    [LoomFinalize2].[Item] AS [Item], 
+    [LoomFinalize2].[Weight] AS [Weight], 
+    [LoomFinalize2].[QtyPcs] AS [QtyPcs], 
+    [LoomFinalize2].[EntryDate] AS [EntryDate], 
+    [LoomFinalize2].[DDate] AS [DDate]
+    FROM [dbo].[LoomFinalize2] AS [LoomFinalize2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PackingFinalize2" EntityType="Self.PackingFinalize2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PackingFinalize2].[Id] AS [Id], 
+    [PackingFinalize2].[Unit] AS [Unit], 
+    [PackingFinalize2].[Item] AS [Item], 
+    [PackingFinalize2].[McA] AS [McA], 
+    [PackingFinalize2].[ProductionA] AS [ProductionA], 
+    [PackingFinalize2].[McB] AS [McB], 
+    [PackingFinalize2].[ProductionB] AS [ProductionB], 
+    [PackingFinalize2].[EntryDate] AS [EntryDate], 
+    [PackingFinalize2].[DDate] AS [DDate]
+    FROM [dbo].[PackingFinalize2] AS [PackingFinalize2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PowerHistoryFinalize2" EntityType="Self.PowerHistoryFinalize2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PowerHistoryFinalize2].[Id] AS [Id], 
+    [PowerHistoryFinalize2].[Unit] AS [Unit], 
+    [PowerHistoryFinalize2].[AshiftPowerLoseT] AS [AshiftPowerLoseT], 
+    [PowerHistoryFinalize2].[AshiftPowerFailm] AS [AshiftPowerFailm], 
+    [PowerHistoryFinalize2].[AshiftGRunning] AS [AshiftGRunning], 
+    [PowerHistoryFinalize2].[BshiftPowerLoseT] AS [BshiftPowerLoseT], 
+    [PowerHistoryFinalize2].[BshiftPowerFailm] AS [BshiftPowerFailm], 
+    [PowerHistoryFinalize2].[BshiftGRunning] AS [BshiftGRunning], 
+    [PowerHistoryFinalize2].[CshiftPowerLoseT] AS [CshiftPowerLoseT], 
+    [PowerHistoryFinalize2].[CshiftPowerFailm] AS [CshiftPowerFailm], 
+    [PowerHistoryFinalize2].[CshiftGRunning] AS [CshiftGRunning], 
+    [PowerHistoryFinalize2].[EntryDate] AS [EntryDate], 
+    [PowerHistoryFinalize2].[DDate] AS [DDate], 
+    [PowerHistoryFinalize2].[ABCTotalPowerLoseT] AS [ABCTotalPowerLoseT], 
+    [PowerHistoryFinalize2].[ABCTotalPowerFailm] AS [ABCTotalPowerFailm], 
+    [PowerHistoryFinalize2].[ABCTotalGRunning] AS [ABCTotalGRunning]
+    FROM [dbo].[PowerHistoryFinalize2] AS [PowerHistoryFinalize2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PowerHistoryLoomFinalize2" EntityType="Self.PowerHistoryLoomFinalize2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PowerHistoryLoomFinalize2].[Id] AS [Id], 
+    [PowerHistoryLoomFinalize2].[Unit] AS [Unit], 
+    [PowerHistoryLoomFinalize2].[AshiftPowerLoseT] AS [AshiftPowerLoseT], 
+    [PowerHistoryLoomFinalize2].[AshiftPowerFailm] AS [AshiftPowerFailm], 
+    [PowerHistoryLoomFinalize2].[AshiftGRunning] AS [AshiftGRunning], 
+    [PowerHistoryLoomFinalize2].[BshiftPowerLoseT] AS [BshiftPowerLoseT], 
+    [PowerHistoryLoomFinalize2].[BshiftPowerFailm] AS [BshiftPowerFailm], 
+    [PowerHistoryLoomFinalize2].[BshiftGRunning] AS [BshiftGRunning], 
+    [PowerHistoryLoomFinalize2].[CshiftPowerLoseT] AS [CshiftPowerLoseT], 
+    [PowerHistoryLoomFinalize2].[CshiftPowerFailm] AS [CshiftPowerFailm], 
+    [PowerHistoryLoomFinalize2].[CshiftGRunning] AS [CshiftGRunning], 
+    [PowerHistoryLoomFinalize2].[EntryDate] AS [EntryDate], 
+    [PowerHistoryLoomFinalize2].[DDate] AS [DDate], 
+    [PowerHistoryLoomFinalize2].[ABCTotalPowerLoseT] AS [ABCTotalPowerLoseT], 
+    [PowerHistoryLoomFinalize2].[ABCTotalPowerFailm] AS [ABCTotalPowerFailm], 
+    [PowerHistoryLoomFinalize2].[ABCTotalGRunning] AS [ABCTotalGRunning]
+    FROM [dbo].[PowerHistoryLoomFinalize2] AS [PowerHistoryLoomFinalize2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PrecisionProductionFinalize2" EntityType="Self.PrecisionProductionFinalize2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PrecisionProductionFinalize2].[Id] AS [Id], 
+    [PrecisionProductionFinalize2].[Unit] AS [Unit], 
+    [PrecisionProductionFinalize2].[ItemName] AS [ItemName], 
+    [PrecisionProductionFinalize2].[ShiftAMC] AS [ShiftAMC], 
+    [PrecisionProductionFinalize2].[ShiftASize] AS [ShiftASize], 
+    [PrecisionProductionFinalize2].[ShiftAProduction] AS [ShiftAProduction], 
+    [PrecisionProductionFinalize2].[ShiftBMC] AS [ShiftBMC], 
+    [PrecisionProductionFinalize2].[ShiftBSize] AS [ShiftBSize], 
+    [PrecisionProductionFinalize2].[ShiftBProduction] AS [ShiftBProduction], 
+    [PrecisionProductionFinalize2].[ShiftCMC] AS [ShiftCMC], 
+    [PrecisionProductionFinalize2].[ShiftCSize] AS [ShiftCSize], 
+    [PrecisionProductionFinalize2].[ShiftCProduction] AS [ShiftCProduction], 
+    [PrecisionProductionFinalize2].[TotalProductionKg] AS [TotalProductionKg], 
+    [PrecisionProductionFinalize2].[TotalMC] AS [TotalMC], 
+    [PrecisionProductionFinalize2].[AverageSize] AS [AverageSize], 
+    [PrecisionProductionFinalize2].[Remarks] AS [Remarks], 
+    [PrecisionProductionFinalize2].[EntryDateTime] AS [EntryDateTime], 
+    [PrecisionProductionFinalize2].[DDate] AS [DDate]
+    FROM [dbo].[PrecisionProductionFinalize2] AS [PrecisionProductionFinalize2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SpinningTwistingProductionFinalize2" EntityType="Self.SpinningTwistingProductionFinalize2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SpinningTwistingProductionFinalize2].[Id] AS [Id], 
+    [SpinningTwistingProductionFinalize2].[Unit] AS [Unit], 
+    [SpinningTwistingProductionFinalize2].[SLNo] AS [SLNo], 
+    [SpinningTwistingProductionFinalize2].[TType] AS [TType], 
+    [SpinningTwistingProductionFinalize2].[ItemName] AS [ItemName], 
+    [SpinningTwistingProductionFinalize2].[ExpType] AS [ExpType], 
+    [SpinningTwistingProductionFinalize2].[MachineRPM] AS [MachineRPM], 
+    [SpinningTwistingProductionFinalize2].[MachineTPI] AS [MachineTPI], 
+    [SpinningTwistingProductionFinalize2].[ShiftAHours] AS [ShiftAHours], 
+    [SpinningTwistingProductionFinalize2].[ShiftAMC] AS [ShiftAMC], 
+    [SpinningTwistingProductionFinalize2].[ShiftASpandle] AS [ShiftASpandle], 
+    [SpinningTwistingProductionFinalize2].[ShiftAProduction] AS [ShiftAProduction], 
+    [SpinningTwistingProductionFinalize2].[ShiftBHours] AS [ShiftBHours], 
+    [SpinningTwistingProductionFinalize2].[ShiftBMC] AS [ShiftBMC], 
+    [SpinningTwistingProductionFinalize2].[ShiftBSpandle] AS [ShiftBSpandle], 
+    [SpinningTwistingProductionFinalize2].[ShiftBProduction] AS [ShiftBProduction], 
+    [SpinningTwistingProductionFinalize2].[ShiftCHours] AS [ShiftCHours], 
+    [SpinningTwistingProductionFinalize2].[ShiftCMC] AS [ShiftCMC], 
+    [SpinningTwistingProductionFinalize2].[ShiftCSpandle] AS [ShiftCSpandle], 
+    [SpinningTwistingProductionFinalize2].[ShiftCProduction] AS [ShiftCProduction], 
+    [SpinningTwistingProductionFinalize2].[TotalProductionKg] AS [TotalProductionKg], 
+    [SpinningTwistingProductionFinalize2].[TargetEfficiencyPercent] AS [TargetEfficiencyPercent], 
+    [SpinningTwistingProductionFinalize2].[TargetEfficiency] AS [TargetEfficiency], 
+    [SpinningTwistingProductionFinalize2].[EfficiencyAchievedPercent] AS [EfficiencyAchievedPercent], 
+    [SpinningTwistingProductionFinalize2].[HundredPercentEfficiencyProduction] AS [HundredPercentEfficiencyProduction], 
+    [SpinningTwistingProductionFinalize2].[EntryDateTime] AS [EntryDateTime], 
+    [SpinningTwistingProductionFinalize2].[DDate] AS [DDate]
+    FROM [dbo].[SpinningTwistingProductionFinalize2] AS [SpinningTwistingProductionFinalize2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SummaryLoomFinalize2" EntityType="Self.SummaryLoomFinalize2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SummaryLoomFinalize2].[Id] AS [Id], 
+    [SummaryLoomFinalize2].[Unit] AS [Unit], 
+    [SummaryLoomFinalize2].[Section] AS [Section], 
+    [SummaryLoomFinalize2].[A_Hands] AS [A_Hands], 
+    [SummaryLoomFinalize2].[B_Hands] AS [B_Hands], 
+    [SummaryLoomFinalize2].[C_Hands] AS [C_Hands], 
+    [SummaryLoomFinalize2].[Total_ABC_Hands] AS [Total_ABC_Hands], 
+    [SummaryLoomFinalize2].[ProductionEntryDate] AS [ProductionEntryDate], 
+    [SummaryLoomFinalize2].[DDate] AS [DDate]
+    FROM [dbo].[SummaryLoomFinalize2] AS [SummaryLoomFinalize2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SummarySpinningFinalize2" EntityType="Self.SummarySpinningFinalize2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SummarySpinningFinalize2].[Id] AS [Id], 
+    [SummarySpinningFinalize2].[Unit] AS [Unit], 
+    [SummarySpinningFinalize2].[Section] AS [Section], 
+    [SummarySpinningFinalize2].[A_Hands] AS [A_Hands], 
+    [SummarySpinningFinalize2].[B_Hands] AS [B_Hands], 
+    [SummarySpinningFinalize2].[C_Hands] AS [C_Hands], 
+    [SummarySpinningFinalize2].[Total_ABC_Hands] AS [Total_ABC_Hands], 
+    [SummarySpinningFinalize2].[ProductionEntryDate] AS [ProductionEntryDate], 
+    [SummarySpinningFinalize2].[DDate] AS [DDate]
+    FROM [dbo].[SummarySpinningFinalize2] AS [SummarySpinningFinalize2]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
